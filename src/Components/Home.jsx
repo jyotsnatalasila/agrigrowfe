@@ -19,17 +19,17 @@ const carouselSlides = [
 ];
 
 const SCROLL_PRODUCTS = [
-  { img: process.env.PUBLIC_URL +"/Images/guava.jpg", alt: "Guava", link: "/product/406" },
-  { img: process.env.PUBLIC_URL +"/Images/pinkrose.jpg", alt: "Pink Rose", link: "/product/507" },
-  { img: process.env.PUBLIC_URL +"/Images/kiwi.jpg", alt: "Kiwi", link: "/product/407" },
-  { img: process.env.PUBLIC_URL +"/Images/potato.jpeg", alt: "Potatoes", link: "/product/214" },
-  { img: process.env.PUBLIC_URL +process.env.PUBLIC_URL +"/Images/cashew.webp", alt: "Cashews", link: "/product/408" },
+  { img: process.env.PUBLIC_URL +"/Images/guava.jpg", alt: "Guava", link: "#/product/406" },
+  { img: process.env.PUBLIC_URL +"/Images/pinkrose.jpg", alt: "Pink Rose", link: "#/product/507" },
+  { img: process.env.PUBLIC_URL +"/Images/kiwi.jpg", alt: "Kiwi", link: "#/product/407" },
+  { img: process.env.PUBLIC_URL +"/Images/potato.jpeg", alt: "Potatoes", link: "#/product/214" },
+  { img: process.env.PUBLIC_URL +"/Images/cashew.webp", alt: "Cashews", link: "#/product/408" },
   { img: process.env.PUBLIC_URL +"/Images/grapes.jpg", alt: "Grapes", link: "/product/409" },
-  { img: process.env.PUBLIC_URL +"/Images/pista.webp", alt: "Pistachios", link: "/product/1110" },
-  { img: process.env.PUBLIC_URL +"/Images/blueberries.webp", alt: "Blueberries", link: "/product/410" },
-  { img: process.env.PUBLIC_URL +"/Images/almond.webp", alt: "Almonds", link: "/product/1111" },
-  { img: process.env.PUBLIC_URL +"/Images/blackberries.jpg", alt: "Blackberries", link: "/product/411" },
-  { img: process.env.PUBLIC_URL +"/Images/strawberry.jpg", alt: "Strawberries", link: "/product/405" }
+  { img: process.env.PUBLIC_URL +"/Images/pista.webp", alt: "Pistachios", link: "#/product/1110" },
+  { img: process.env.PUBLIC_URL +"/Images/blueberries.webp", alt: "Blueberries", link: "#/product/410" },
+  { img: process.env.PUBLIC_URL +"/Images/almond.webp", alt: "Almonds", link: "#/product/1111" },
+  { img: process.env.PUBLIC_URL +"/Images/blackberries.jpg", alt: "Blackberries", link: "#/product/411" },
+  { img: process.env.PUBLIC_URL +"/Images/strawberry.jpg", alt: "Strawberries", link: "#/product/405" }
 ];
 
 function ReactCarousel() {
@@ -60,6 +60,7 @@ function ReactCarousel() {
           overflow: hidden;
           border-radius: 8px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          margin: 0 auto;
         }
 
         .carousel-slides {
@@ -77,83 +78,83 @@ function ReactCarousel() {
         .carousel-slide img {
           width: 100%;
           height: 100%;
-          objectFit: "cover";
-          display: "block";
+          object-fit: cover;
+          display: block;
         }
 
         .carousel-indicators {
-          position: "absolute";
-          bottom: "20px";
-          left: "50%";
-          transform: "translateX(-50%)";
-          display: "flex";
-          gap: "14px";
-          zIndex: 10;
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 14px;
+          z-index: 10;
         }
 
-       .carousel-indicator {
-          width: "24px";
-          height: "5px";
-          borderRadius: "4px";
-          background: "rgba(255, 255, 255, 0.4)";
-          border: "none";
-          cursor: "pointer";
-          transition: "all 0.3s ease";
-          boxShadow: "0 0 4px rgba(0,0,0,0.2)";
-          }
-
-       .carousel-indicator:hover {
-          background: "rgba(255, 255, 255, 0.7)";
-          transform: "scale(1.1)";
+        .carousel-indicator {
+          width: 24px;
+          height: 5px;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 0.4);
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 0 4px rgba(0,0,0,0.2);
         }
 
-       .carousel-indicator.active {
-          background: "#fff";
-          transform: "scale(1.3)";
-          boxShadow: "0 0 6px rgba(0,0,0,0.3)";
+        .carousel-indicator:hover {
+          background: rgba(255, 255, 255, 0.7);
+          transform: scale(1.1);
+        }
+
+        .carousel-indicator.active {
+          background: #fff;
+          transform: scale(1.3);
+          box-shadow: 0 0 6px rgba(0,0,0,0.3);
         }
 
         .carousel-control {
-          position: "absolute";
-          top: "50%";
-          transform: "translateY(-50%)";
-          background: "rgba(0, 0, 0, 0.5)";
-          color: "white";
-          border: "none";
-          padding: "15px";
-          cursor: "pointer";
-          fontSize: "30px";
-          fontWeight: "bold";
-          transition: "background 0.3s ease";
-          borderRadius: "50%";
-          display: "flex";
-          alignItems: "center";
-          justifyContent: "center";
-          width: "50px";
-          height: "50px";
-          zIndex: 10;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          padding: 15px;
+          cursor: pointer;
+          font-size: 30px;
+          font-weight: bold;
+          transition: background 0.3s ease;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          z-index: 10;
         }
 
         .carousel-control:hover {
-          background: "rgba(0, 0, 0, 0.8)";
+          background: rgba(0, 0, 0, 0.8);
         }
 
         .carousel-control.prev {
-          left: "20px";
+          left: 20px;
         }
 
         .carousel-control.next {
-          right: "20px";
+          right: 20px;
         }
 
         .carousel-overlay {
-          position: "absolute";
+          position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          background: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%)";
-          pointerEvents: "none";
+          background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+          pointer-events: none;
         }
       `}</style>
       <div className="carousel-container">
@@ -169,8 +170,12 @@ function ReactCarousel() {
           ))}
         </div>
 
-        <button className="carousel-control prev" onClick={prevSlide} aria-label="Previous slide">‹</button>
-        <button className="carousel-control next" onClick={nextSlide} aria-label="Next slide">›</button>
+        <button className="carousel-control prev" onClick={prevSlide} aria-label="Previous slide">
+          ‹
+        </button>
+        <button className="carousel-control next" onClick={nextSlide} aria-label="Next slide">
+          ›
+        </button>
 
         <div className="carousel-indicators">
           {carouselSlides.map((_, index) => (
@@ -191,12 +196,12 @@ function CategoryGrid() {
   const { darkTheme } = useLocationContext();
   
   const CATEGORY_CARDS = [
-    { title: "Paddy/Rice", image: process.env.PUBLIC_URL +"/Images/paddy.jpg", link: "./Rice" },
-    { title: "Maize/Corn", image: process.env.PUBLIC_URL +"/Images/maize.webp", link: "./Corn" },
-    { title: "Spices", image: process.env.PUBLIC_URL +"/Images/spices.jpg", link: "./Spices" },
-    { title: "Grams/Pulses", image: process.env.PUBLIC_URL +"/Images/pulses.webp", link: "./Pulses" },
-    { title: "Indoor Plants", image: process.env.PUBLIC_URL +"/Images/plants.jpg", link: "./IndoorPlants" },
-    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/sapplings.jpg", link: "./Sapplings" },
+    { title: "Paddy/Rice", image: process.env.PUBLIC_URL +"/Images/paddy.jpg", link: ".#/Rice" },
+    { title: "Maize/Corn", image: process.env.PUBLIC_URL +"/Images/maize.webp", link: ".#/Corn" },
+    { title: "Spices", image: process.env.PUBLIC_URL +"/Images/spices.jpg", link: ".#/Spices" },
+    { title: "Grams/Pulses", image: process.env.PUBLIC_URL +"/Images/pulses.webp", link: ".#/Pulses" },
+    { title: "Indoor Plants", image: process.env.PUBLIC_URL +"/Images/plants.jpg", link: ".#/IndoorPlants" },
+    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/sapplings.jpg", link: ".#/Sapplings" },
   ];
 
   return (
