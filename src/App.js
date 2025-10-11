@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './i18n';
 import Welcome from './Components/Welcome';
@@ -40,7 +40,7 @@ import Nuts from './Components/Nuts';
 function App() {
   return (
     <LocationProvider> 
-      <Router>  {/* REMOVED basename */}
+      <Router basename="/AgriGrow-FE">
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />

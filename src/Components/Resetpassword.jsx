@@ -49,7 +49,7 @@ const ResetPassword = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: 'url("/Images/loginbg.jpg")',
+        backgroundImage: 'url(process.env.PUBLIC_URL +"/Images/loginbg.jpg")',
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

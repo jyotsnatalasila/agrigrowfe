@@ -34,7 +34,7 @@ const Fruits = [
     id: 403,
     brand: "Farmer",
     name: "Papaya",
-    images: ["/Images/papaya1.jpg", "/Images/papaya2.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/papaya1.jpg", process.env.PUBLIC_URL +"/Images/papaya2.jpg"],
     priceOptions: [
       { unit: "1 item", unitPrice: 35 },
     ],
@@ -43,7 +43,7 @@ const Fruits = [
     id: 404,
     brand: "Farmer",
     name: "Dragon Fruit",
-    images: ["/Images/dragonfruitimg2.webp", "/Images/dragonfruit1.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/dragonfruitimg2.webp", process.env.PUBLIC_URL +"/Images/dragonfruit1.webp"],
     priceOptions: [
         { unit: "1 item", unitPrice: 120},
     ],
@@ -52,7 +52,7 @@ const Fruits = [
     id: 405,
     brand: "Farmer",
     name: "Strawberry",
-    images: ["/Images/strawberry.jpg", "/Images/strawberry2.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/strawberry.jpg", process.env.PUBLIC_URL +"/Images/strawberry2.jpg"],
     priceOptions: [
       { unit: "grams", unitPrice: 80, gramWeight: 100 },
     ],
@@ -61,7 +61,7 @@ const Fruits = [
     id: 406,
     brand: "Farmer",
     name: "Guava",
-    images: ["/Images/guava.jpg", "/Images/guava-1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/guava.jpg", process.env.PUBLIC_URL +"/Images/guava-1.jpg"],
     priceOptions: [
       { unit: "grams", unitPrice: 80, gramWeight: 100 },
     ],
@@ -70,7 +70,7 @@ const Fruits = [
     id: 407,
     brand: "Farmer",
     name: "Kiwi",
-    images: ["/Images/kiwi.jpg", "/Images/kiwi.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/kiwi.jpg", process.env.PUBLIC_URL +"/Images/kiwi.webp"],
     priceOptions: [
         { unit: "1 item", unitPrice: 120},
     ],
@@ -79,7 +79,7 @@ const Fruits = [
     id: 408,
     brand: "Farmer",
     name: "Cashew Fruit",
-    images: ["/Images/cashew.webp", "/Images/cashew1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/cashew.webp", process.env.PUBLIC_URL +"/Images/cashew1.jpg"],
     priceOptions: [
         { unit: "1 kg", unitPrice: 800},
     ],
@@ -88,7 +88,7 @@ const Fruits = [
     id: 409,
     brand: "Farmer",
     name: "Grapes",
-    images: ["/Images/grapes.jpg", "/Images/grapes1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/grapes.jpg", process.env.PUBLIC_URL +"/Images/grapes1.jpg"],
     priceOptions: [
         { unit: "1 kg", unitPrice: 800},
     ],
@@ -97,7 +97,7 @@ const Fruits = [
     id: 410,
     brand: "Farmer",
     name: "Blue Berry",
-    images: ["/Images/blueberries.webp", "/Images/blueberries1.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/blueberries.webp", process.env.PUBLIC_URL +"/Images/blueberries1.webp"],
     priceOptions: [
         { unit: "250 grams", unitPrice: 200},
     ],
@@ -106,7 +106,7 @@ const Fruits = [
     id: 411,
     brand: "Farmer",
     name: "Black Berry",
-    images: ["/Images/blackberries.jpg", "/Images/blackberries.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/blackberries.jpg", process.env.PUBLIC_URL +"/Images/blackberries.webp"],
     priceOptions: [
         { unit: "250 grams", unitPrice: 250},
     ],
