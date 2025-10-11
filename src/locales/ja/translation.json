@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "配送先：",
+    "selectLocation": "場所を選択",
+    "searchPlaceholder": "商品を検索...",
+    "language": "言語：",
+    "returnsOrders": "返品と注文",
+    "viewCart": "カートを見る",
+    "notifications": "通知",
+    "account": "アカウント",
+    "darkTheme": "ダークテーマに切り替え",
+    "lightTheme": "ライトテーマに切り替え",
+    "currencyConverter": "通貨コンバーター"
+  },
+  "category": {
+    "home": "ホーム",
+    "bestSellers": "ベストセラー",
+    "todayDeals": "本日のお得情報",
+    "newReleases": "新着商品",
+    "lotus": "蓮",
+    "fruits": "果物",
+    "flowers": "花",
+    "vegetables": "野菜",
+    "aquaticFeed": "水産飼料",
+    "seedsSaplings": "種子と苗木",
+    "all": "すべて"
+  },
+  "location": {
+    "modalTitle": "場所を選択してください",
+    "dragOrClick": "ドラッグするか地図をクリック",
+    "cancel": "キャンセル",
+    "selectLocation": "場所を選択"
+  },
+  "currency": {
+    "title": "通貨を選択してください",
+    "from": "から：",
+    "to": "へ：",
+    "enterAmount": "金額を入力",
+    "convert": "変換",
+    "convertedTitle": "変換後の通貨",
+    "loading": "読み込み中..."
+  }
+}

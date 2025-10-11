@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "Livrer à:",
+    "selectLocation": "Sélectionner l'emplacement",
+    "searchPlaceholder": "Rechercher des produits...",
+    "language": "Langue:",
+    "returnsOrders": "Retours et commandes",
+    "viewCart": "Voir le panier",
+    "notifications": "Notifications",
+    "account": "Compte",
+    "darkTheme": "Passer au thème sombre",
+    "lightTheme": "Passer au thème clair",
+    "currencyConverter": "Convertisseur de devises"
+  },
+  "category": {
+    "home": "Accueil",
+    "bestSellers": "Meilleures ventes",
+    "todayDeals": "Offres du jour",
+    "newReleases": "Nouveautés",
+    "lotus": "Lotus",
+    "fruits": "Fruits",
+    "flowers": "Fleurs",
+    "vegetables": "Légumes",
+    "aquaticFeed": "Aliments aquatiques",
+    "seedsSaplings": "Graines et plants",
+    "all": "Tous"
+  },
+  "location": {
+    "modalTitle": "Sélectionnez votre emplacement",
+    "dragOrClick": "Faites-moi glisser ou cliquez sur la carte",
+    "cancel": "Annuler",
+    "selectLocation": "Sélectionner l'emplacement"
+  },
+  "currency": {
+    "title": "Sélectionnez votre devise",
+    "from": "De:",
+    "to": "À:",
+    "enterAmount": "Entrer le montant",
+    "convert": "Convertir",
+    "convertedTitle": "Votre devise convertie",
+    "loading": "Chargement..."
+  }
+}

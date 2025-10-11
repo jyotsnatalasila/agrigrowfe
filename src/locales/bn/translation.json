@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "এখানে ডেলিভার:",
+    "selectLocation": "অবস্থান নির্বাচন করুন",
+    "searchPlaceholder": "পণ্য অনুসন্ধান করুন...",
+    "language": "ভাষা:",
+    "returnsOrders": "রিটার্ন এবং অর্ডার",
+    "viewCart": "কার্ট দেখুন",
+    "notifications": "বিজ্ঞপ্তি",
+    "account": "অ্যাকাউন্ট",
+    "darkTheme": "ডার্ক থিমে পরিবর্তন করুন",
+    "lightTheme": "লাইট থিমে পরিবর্তন করুন",
+    "currencyConverter": "মুদ্রা রূপান্তরকারী"
+  },
+  "category": {
+    "home": "হোম",
+    "bestSellers": "সেরা বিক্রেতা",
+    "todayDeals": "আজকের ডিল",
+    "newReleases": "নতুন প্রকাশ",
+    "lotus": "পদ্ম",
+    "fruits": "ফল",
+    "flowers": "ফুল",
+    "vegetables": "সবজি",
+    "aquaticFeed": "জলজ খাদ্য",
+    "seedsSaplings": "বীজ এবং চারা",
+    "all": "সব"
+  },
+  "location": {
+    "modalTitle": "আপনার অবস্থান নির্বাচন করুন",
+    "dragOrClick": "আমাকে টেনে আনুন বা মানচিত্রে ক্লিক করুন",
+    "cancel": "বাতিল করুন",
+    "selectLocation": "অবস্থান নির্বাচন করুন"
+  },
+  "currency": {
+    "title": "আপনার মুদ্রা নির্বাচন করুন",
+    "from": "থেকে:",
+    "to": "পর্যন্ত:",
+    "enterAmount": "পরিমাণ লিখুন",
+    "convert": "রূপান্তর করুন",
+    "convertedTitle": "আপনার রূপান্তরিত মুদ্রা",
+    "loading": "লোড হচ্ছে..."
+  }
+}

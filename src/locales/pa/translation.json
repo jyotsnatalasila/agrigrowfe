@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "ਇੱਥੇ ਡਿਲੀਵਰ ਕਰ ਰਹੇ ਹਾਂ:",
+    "selectLocation": "ਸਥਾਨ ਚੁਣੋ",
+    "searchPlaceholder": "ਉਤਪਾਦਾਂ ਦੀ ਖੋਜ ਕਰੋ...",
+    "language": "ਭਾਸ਼ਾ:",
+    "returnsOrders": "ਵਾਪਸੀ ਅਤੇ ਆਰਡਰ",
+    "viewCart": "ਕਾਰਟ ਦੇਖੋ",
+    "notifications": "ਸੂਚਨਾਵਾਂ",
+    "account": "ਖਾਤਾ",
+    "darkTheme": "ਡਾਰਕ ਥੀਮ 'ਤੇ ਸਵਿੱਚ ਕਰੋ",
+    "lightTheme": "ਲਾਈਟ ਥੀਮ 'ਤੇ ਸਵਿੱਚ ਕਰੋ",
+    "currencyConverter": "ਮੁਦਰਾ ਪਰਿਵਰਤਕ"
+  },
+  "category": {
+    "home": "ਘਰ",
+    "bestSellers": "ਸਰਵੋਤਮ ਵਿਕਰੇਤਾ",
+    "todayDeals": "ਅੱਜ ਦੇ ਸੌਦੇ",
+    "newReleases": "ਨਵੀਆਂ ਰਿਲੀਜ਼ਾਂ",
+    "lotus": "ਕਮਲ",
+    "fruits": "ਫਲ",
+    "flowers": "ਫੁੱਲ",
+    "vegetables": "ਸਬਜ਼ੀਆਂ",
+    "aquaticFeed": "ਜਲ ਭੋਜਨ",
+    "seedsSaplings": "ਬੀਜ ਅਤੇ ਪੌਦੇ",
+    "all": "ਸਾਰੇ"
+  },
+  "location": {
+    "modalTitle": "ਆਪਣਾ ਸਥਾਨ ਚੁਣੋ",
+    "dragOrClick": "ਮੈਨੂੰ ਖਿੱਚੋ ਜਾਂ ਨਕਸ਼ੇ 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "selectLocation": "ਸਥਾਨ ਚੁਣੋ"
+  },
+  "currency": {
+    "title": "ਆਪਣੀ ਮੁਦਰਾ ਚੁਣੋ",
+    "from": "ਤੋਂ:",
+    "to": "ਤੱਕ:",
+    "enterAmount": "ਰਕਮ ਦਰਜ ਕਰੋ",
+    "convert": "ਬਦਲੋ",
+    "convertedTitle": "ਤੁਹਾਡੀ ਬਦਲੀ ਹੋਈ ਮੁਦਰਾ",
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ..."
+  }
+}

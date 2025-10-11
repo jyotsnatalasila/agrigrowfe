@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "Delivering to:",
+    "selectLocation": "Select Location",
+    "searchPlaceholder": "Search for products...",
+    "language": "Language:",
+    "returnsOrders": "Returns & Orders",
+    "viewCart": "View Cart",
+    "notifications": "Notifications",
+    "account": "Account",
+    "darkTheme": "Switch to Dark Theme",
+    "lightTheme": "Switch to Light Theme",
+    "currencyConverter": "Currency Converter"
+  },
+  "category": {
+    "home": "Home",
+    "bestSellers": "Best Sellers",
+    "todayDeals": "Today's Deals",
+    "newReleases": "New Releases",
+    "lotus": "Lotus",
+    "fruits": "Fruits",
+    "flowers": "Flowers",
+    "vegetables": "Vegetables",
+    "aquaticFeed": "Aquatic Feed",
+    "seedsSaplings": "Seeds & Saplings",
+    "all": "All"
+  },
+  "location": {
+    "modalTitle": "Select your location",
+    "dragOrClick": "Drag me or click map",
+    "cancel": "Cancel",
+    "selectLocation": "Select Location"
+  },
+  "currency": {
+    "title": "Select your Currency",
+    "from": "From:",
+    "to": "To:",
+    "enterAmount": "Enter amount",
+    "convert": "Convert",
+    "convertedTitle": "Your Converted Currency",
+    "loading": "Loading..."
+  }
+}

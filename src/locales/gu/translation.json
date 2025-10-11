@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "અહીં ડિલિવરી કરી રહ્યા છીએ:",
+    "selectLocation": "સ્થાન પસંદ કરો",
+    "searchPlaceholder": "ઉત્પાદનો માટે શોધો...",
+    "language": "ભાષા:",
+    "returnsOrders": "રિટર્ન અને ઓર્ડર",
+    "viewCart": "કાર્ટ જુઓ",
+    "notifications": "સૂચનાઓ",
+    "account": "ખાતું",
+    "darkTheme": "ડાર્ક થીમ પર સ્વિચ કરો",
+    "lightTheme": "લાઇટ થીમ પર સ્વિચ કરો",
+    "currencyConverter": "ચલણ કન્વર્ટર"
+  },
+  "category": {
+    "home": "હોમ",
+    "bestSellers": "શ્રેષ્ઠ વિક્રેતાઓ",
+    "todayDeals": "આજના સોદા",
+    "newReleases": "નવા પ્રકાશનો",
+    "lotus": "કમળ",
+    "fruits": "ફળો",
+    "flowers": "ફૂલો",
+    "vegetables": "શાકભાજી",
+    "aquaticFeed": "જળચર ખોરાક",
+    "seedsSaplings": "બીજ અને રોપા",
+    "all": "બધા"
+  },
+  "location": {
+    "modalTitle": "તમારું સ્થાન પસંદ કરો",
+    "dragOrClick": "મને ખેંચો અથવા નકશા પર ક્લિક કરો",
+    "cancel": "રદ કરો",
+    "selectLocation": "સ્થાન પસંદ કરો"
+  },
+  "currency": {
+    "title": "તમારું ચલણ પસંદ કરો",
+    "from": "થી:",
+    "to": "સુધી:",
+    "enterAmount": "રકમ દાખલ કરો",
+    "convert": "રૂપાંતરિત કરો",
+    "convertedTitle": "તમારું રૂપાંતરિત ચલણ",
+    "loading": "લોડ થઈ રહ્યું છે..."
+  }
+}

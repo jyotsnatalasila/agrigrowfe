@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "deliverTo": "配送至：",
+    "selectLocation": "选择位置",
+    "searchPlaceholder": "搜索产品...",
+    "language": "语言：",
+    "returnsOrders": "退货和订单",
+    "viewCart": "查看购物车",
+    "notifications": "通知",
+    "account": "账户",
+    "darkTheme": "切换到暗色主题",
+    "lightTheme": "切换到亮色主题",
+    "currencyConverter": "货币转换器"
+  },
+  "category": {
+    "home": "首页",
+    "bestSellers": "畅销商品",
+    "todayDeals": "今日优惠",
+    "newReleases": "新品发布",
+    "lotus": "莲花",
+    "fruits": "水果",
+    "flowers": "鲜花",
+    "vegetables": "蔬菜",
+    "aquaticFeed": "水产饲料",
+    "seedsSaplings": "种子和幼苗",
+    "all": "全部"
+  },
+  "location": {
+    "modalTitle": "选择您的位置",
+    "dragOrClick": "拖动我或点击地图",
+    "cancel": "取消",
+    "selectLocation": "选择位置"
+  },
+  "currency": {
+    "title": "选择您的货币",
+    "from": "从：",
+    "to": "到：",
+    "enterAmount": "输入金额",
+    "convert": "转换",
+    "convertedTitle": "您转换后的货币",
+    "loading": "加载中..."
+  }
+}
