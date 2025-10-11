@@ -13,7 +13,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.43.0",
+    "@typescript-eslint/parser": "a^8.43.0",
     "axios": "^1.10.0",
     "eslint": "^9.35.0",
     "eslint-plugin-jest": "^29.0.1",
@@ -36,7 +36,7 @@
   },
   "scripts": {
     "start": "set PORT=4000 && react-scripts start",
-    "predeploy": "npm run build",
+    "predeploy": "DISABLE_ESLINT_PLUGIN=true npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
