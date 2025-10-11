@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // ✅ Make sure this line is present
+import { Link } from 'react-router-dom'; 
 
 const Welcome = () => {
   return (

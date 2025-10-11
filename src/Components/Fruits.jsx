@@ -7,7 +7,7 @@ const Fruits = [
     id: 400,
     brand: "Farmer",
     name: "Mango",
-    images: ["/Images/mango1.jpg", "/Images/mango2.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/mango1.jpg", process.env.PUBLIC_URL +"/Images/mango2.webp"],
     priceOptions: [
       { unit: "1 kg", unitPrice: 100 },
     ],
@@ -16,7 +16,7 @@ const Fruits = [
     id: 401,
     brand: "Farmer",
     name: "Banana",
-    images: ["/Images/banana1.webp", "/Images/banana2.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/banana1.webp", process.env.PUBLIC_URL +"/Images/banana2.webp"],
     priceOptions: [
       { unit: "1 bunch", unitPrice: 60 },
     ],
@@ -25,7 +25,7 @@ const Fruits = [
     id: 402,
     brand: "Farmer",
     name: "Apple",
-    images: ["/Images/apple1.webp", "/Images/apple2.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/apple1.webp", process.env.PUBLIC_URL +"/Images/apple2.webp"],
     priceOptions: [
       { unit: "1 kg", unitPrice: 180 },
     ],
