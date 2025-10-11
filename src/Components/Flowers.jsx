@@ -7,7 +7,7 @@ const Flowers = [
     id: 500,
     brand: "Farmer",
     name: "Rose Flowers",
-    images: ["/Images/rose.jpg", "/Images/rose1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/rose.jpg", process.env.PUBLIC_URL +"/Images/rose1.jpg"],
     priceOptions: [
       { unit: "1 item", unitPrice: 25 },
     ],
@@ -16,7 +16,7 @@ const Flowers = [
     id: 501,
     brand: "Blossom",
     name: "Tulip",
-    images: ["/Images/tulip1.jpg", "/Images/tulip.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/tulip1.jpg", process.env.PUBLIC_URL +"/Images/tulip.jpg"],
     priceOptions: [
       { unit: "1 item", unitPrice: 50 },
     ],
@@ -25,7 +25,7 @@ const Flowers = [
     id: 502,
     brand: "Blossom",
     name: "Marigold Garland",
-    images: ["/Images/marigold.jpg", "/Images/marigold1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/marigold.jpg", process.env.PUBLIC_URL +"/Images/marigold1.jpg"],
     priceOptions: [
       { unit: "item", unitPrice: 60 },
     ],
@@ -34,7 +34,7 @@ const Flowers = [
     id: 503,
     brand: "Farmer",
     name: "Orchid",
-    images: ["/Images/orchid.jpg", "/Images/orchid.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/orchid.jpg", process.env.PUBLIC_URL +"/Images/orchid.webp"],
     priceOptions: [
       { unit: "item", unitPrice: 90 },
     ],
@@ -43,7 +43,7 @@ const Flowers = [
     id: 504,
     brand: "Blossom",
     name: "Lily Bouquet",
-    images: ["/Images/lilly1.jpg", "/Images/lilly.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/lilly1.jpg", process.env.PUBLIC_URL +"/Images/lilly.jpg"],
     priceOptions: [
       { unit: "bunch", unitPrice: 280 },
     ],
@@ -52,7 +52,7 @@ const Flowers = [
     id: 505,
     brand: "Blossom",
     name: "Jasmine",
-    images: ["/Images/jasmine.png", "/Images/jasmine.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/jasmine.png", process.env.PUBLIC_URL +"/Images/jasmine.jpg"],
     priceOptions: [
       { unit: "grams", unitPrice: 90, gramWeight: 100 },
     ],
@@ -61,7 +61,7 @@ const Flowers = [
     id: 506,
     brand: "Blossom",
     name: "Chrysanthemum",
-    images: ["/Images/chrysanthemum.jpg", "/Images/chrysanthemum1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/chrysanthemum.jpg", process.env.PUBLIC_URL +"/Images/chrysanthemum1.jpg"],
     priceOptions: [
       { unit: "grams", unitPrice: 100, gramWeight: 100 },
     ],
@@ -70,7 +70,7 @@ const Flowers = [
     id: 507,
     brand: "Farmer",
     name: "Pink Rose",
-    images: ["/Images/pinkrose.jpg", "/Images/pinkrose1.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/pinkrose.jpg", process.env.PUBLIC_URL +"/Images/pinkrose1.jpg"],
     priceOptions: [
       { unit: "item", unitPrice: 90 },
     ],

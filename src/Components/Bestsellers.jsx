@@ -7,7 +7,7 @@ const Bs = [
     id: 6,
     brand: "Farmer",
     name: "Jasmine Rice",
-    images: ["/Images/jasmine-rice.webp", "/Images/jasmine-riceimg2.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/jasmine-rice.webp", process.env.PUBLIC_URL +"/Images/jasmine-riceimg2.webp"],
     priceOptions: [
       { unit: "kg", unitPrice: 140 },
     ],
@@ -16,7 +16,7 @@ const Bs = [
     id: 71,
     brand: "Farmer",
     name: "Sweet Corn",
-    images: ["/Images/sweetcorn.jpg", "/Images/sweetcornimg2.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/sweetcorn.jpg", process.env.PUBLIC_URL +"/Images/sweetcornimg2.jpg"],
     priceOptions: [
       { unit: "item", unitPrice: 20 },
     ],
@@ -25,7 +25,7 @@ const Bs = [
     id: 95,
     brand: "Farmer",
     name: "Water Lily (Yellow Lotus)",
-    images: ["/Images/yellowlotus.webp", "/Images/yellowlotus.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/yellowlotus.webp", process.env.PUBLIC_URL +"/Images/yellowlotus.jpg"],
     priceOptions: [
       { unit: "item", unitPrice: 70 },
     ],
@@ -34,7 +34,7 @@ const Bs = [
     id: 120,
     brand: "Farmer",
     name: "Tumeric",
-    images: ["/Images/turmericimg2.jpg", "/Images/turmeric.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/turmericimg2.jpg", process.env.PUBLIC_URL +"/Images/turmeric.jpg"],
     priceOptions: [
       { unit: "grams", unitPrice: 40, gramWeight: 100 },
     ],
@@ -43,7 +43,7 @@ const Bs = [
      id: 92,
     brand: "Farmer",
     name: "Lithops",
-    images: ["/Images/lithopsimg2.webp", "/Images/lithops.webp"],
+    images: [process.env.PUBLIC_URL +"/Images/lithopsimg2.webp", process.env.PUBLIC_URL +"/Images/lithops.webp"],
     priceOptions: [
       { unit: "item", unitPrice: 100 },
     ],
@@ -52,7 +52,7 @@ const Bs = [
     id: 54,
     brand: "Farmer",
     name: "Banyan Sappling",
-    images: ["/Images/banyan.jpg", "/Images/banyanimg2.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/banyan.jpg", process.env.PUBLIC_URL +"/Images/banyanimg2.jpg"],
     priceOptions: [
       { unit: "item", unitPrice: 30 },
     ],
@@ -61,7 +61,7 @@ const Bs = [
     id: 110,
     brand: "Farmer",
     name: "Saffron",
-    images: ["/Images/saffron.cms", "/Images/saffronimg2.jpg"],
+    images: [process.env.PUBLIC_URL +"/Images/saffron.cms", process.env.PUBLIC_URL +"/Images/saffronimg2.jpg"],
     priceOptions: [
          { unit: "grams", unitPrice: 25000, gramWeight: 100 }
     ],
