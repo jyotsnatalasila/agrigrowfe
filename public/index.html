@@ -2,35 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="description" content="AgriGrow - Agricultural E-commerce Platform" />
     
-    <link rel="icon" type="image/png" href={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`} />
+    <!-- ✅ CORRECT - Simple absolute path -->
+    <link rel="icon" type="image/png" href="/Images/agrigrowlogo.png" />
     <title>AgriGrow</title>
 
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- ✅ Google Translate CSS Fix (hide white dot) -->
+    <!-- Google Translate CSS Fix -->
     <style>
-      .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-      }
-      body {
-        top: 0px !important;
-      }
-      .goog-logo-link,
-      .goog-te-gadget span {
-        display: none !important;
-      }
-      .goog-te-gadget {
-        color: transparent !important;
-      }
+      .goog-te-banner-frame.skiptranslate { display: none !important; }
+      body { top: 0px !important; }
+      .goog-logo-link, .goog-te-gadget span { display: none !important; }
+      .goog-te-gadget { color: transparent !important; }
       #google_translate_element select {
         background-color: #fff;
         color: #000;
@@ -40,31 +28,24 @@
         font-size: 0.9em;
         border: 1px solid #ccc;
       }
+      body > div.skiptranslate > iframe.skiptranslate {
+        display: none !important;
+      }
     </style>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,hi,te,ta,kn,ml,bn,pa,gu,fr,es,de,it,zh-CN,ja',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<style>
-
-body > div.skiptranslate > iframe.skiptranslate {
-  display: none !important;
-}
-body {
-  top: 0px !important;
-}
-</style>
-
-
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi,te,ta,kn,ml,bn,pa,gu,fr,es,de,it,zh-CN,ja',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </head>
+  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
