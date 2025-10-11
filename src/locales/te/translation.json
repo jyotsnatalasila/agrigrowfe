@@ -1,43 +1,43 @@
 {
-	"navbar": {
-		"deliverTo": "Delivering to:",
-		"selectLocation": "Select Location",
-		"searchPlaceholder": "Search for products...",
-		"language": "Language:",
-		"returnsOrders": "Returns & Orders",
-		"viewCart": "View Cart",
-		"notifications": "Notifications",
-		"account": "Account",
-		"darkTheme": "Switch to Dark Theme",
-		"lightTheme": "Switch to Light Theme",
-		"currencyConverter": "Currency Converter"
-	},
-	"category": {
-		"home": "Home",
-		"bestSellers": "Best Sellers",
-		"todayDeals": "Today's Deals",
-		"newReleases": "New Releases",
-		"lotus": "Lotus",
-		"fruits": "Fruits",
-		"flowers": "Flowers",
-		"vegetables": "Vegetables",
-		"aquaticFeed": "Aquatic Feed",
-		"seedsSaplings": "Seeds & Saplings",
-		"all": "All"
-	},
-	"location": {
-		"modalTitle": "Select your location",
-		"dragOrClick": "Drag me or click map",
-		"cancel": "Cancel",
-		"selectLocation": "Select Location"
-	},
-	"currency": {
-		"title": "Select your Currency",
-		"from": "From:",
-		"to": "To:",
-		"enterAmount": "Enter amount",
-		"convert": "Convert",
-		"convertedTitle": "Your Converted Currency",
-		"loading": "Loading..."
-	}
+  "navbar": {
+    "deliverTo": "ఇక్కడికి డెలివరీ చేస్తున్నాము:",
+    "selectLocation": "స్థానాన్ని ఎంచుకోండి",
+    "searchPlaceholder": "ఉత్పత్తుల కోసం శోధించండి...",
+    "language": "భాష:",
+    "returnsOrders": "రిటర్న్స్ మరియు ఆర్డర్‌లు",
+    "viewCart": "కార్ట్ చూడండి",
+    "notifications": "నోటిఫికేషన్‌లు",
+    "account": "ఖాతా",
+    "darkTheme": "డార్క్ థీమ్‌కు మారండి",
+    "lightTheme": "లైట్ థీమ్‌కు మారండి",
+    "currencyConverter": "కరెన్సీ కన్వర్టర్"
+  },
+  "category": {
+    "home": "హోమ్",
+    "bestSellers": "బెస్ట్ సెల్లర్స్",
+    "todayDeals": "నేటి డీల్స్",
+    "newReleases": "కొత్త విడుదలలు",
+    "lotus": "కమలం",
+    "fruits": "పండ్లు",
+    "flowers": "పువ్వులు",
+    "vegetables": "కూరగాయలు",
+    "aquaticFeed": "జల ఆహారం",
+    "seedsSaplings": "విత్తనాలు మరియు మొక్కలు",
+    "all": "అన్నీ"
+  },
+  "location": {
+    "modalTitle": "మీ స్థానాన్ని ఎంచుకోండి",
+    "dragOrClick": "నన్ను లాగండి లేదా మ్యాప్‌ని క్లిక్ చేయండి",
+    "cancel": "రద్దు చేయండి",
+    "selectLocation": "స్థానాన్ని ఎంచుకోండి"
+  },
+  "currency": {
+    "title": "మీ కరెన్సీని ఎంచుకోండి",
+    "from": "నుండి:",
+    "to": "కు:",
+    "enterAmount": "మొత్తాన్ని నమోదు చేయండి",
+    "convert": "మార్చండి",
+    "convertedTitle": "మీ మార్చబడిన కరెన్సీ",
+    "loading": "లోడ్ అవుతోంది..."
+  }
 }

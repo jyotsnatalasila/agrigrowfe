@@ -16,10 +16,10 @@
     "axios": "^1.10.0",
     "eslint": "^9.35.0",
     "eslint-plugin-jest": "^29.0.1",
+    "fuse.js": "^6.6.2",
     "i18next": "^25.5.3",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
-  "fuse.js": "^6.6.2",
     "leaflet": "^1.9.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -35,6 +35,8 @@
   },
   "scripts": {
     "start": "set PORT=4000 && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -59,6 +61,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13"
   }

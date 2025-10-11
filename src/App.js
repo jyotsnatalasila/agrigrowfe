@@ -40,7 +40,7 @@ import Nuts from './Components/Nuts';
 function App() {
   return (
     <LocationProvider> 
-      <Router>
+      <Router basename="/AgriGrow-FE">
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
