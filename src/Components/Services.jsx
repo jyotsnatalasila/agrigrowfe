@@ -86,7 +86,7 @@ function Services() {
           {["Home", "Services", "Contact", "About"].map((link) => (
             <a
               key={link}
-              href={`/${link.toLowerCase()}`}
+              href={`#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",

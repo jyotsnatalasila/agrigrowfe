@@ -57,7 +57,7 @@ function Contact() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
             alt="AgriGrow Logo"
             style={{ height: 60 }}
           />
@@ -76,7 +76,7 @@ function Contact() {
           {["Home", "Services", "About", "Contact"].map((link) => (
             <a
               key={link}
-              href={`/${link.toLowerCase()}`}
+              href={`#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",

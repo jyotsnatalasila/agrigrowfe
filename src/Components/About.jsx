@@ -32,7 +32,7 @@ function About() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -51,7 +51,7 @@ function About() {
           {["Home", "Services", "Contact", "About"].map((link) => (
             <a
               key={link}
-              href={`/${link.toLowerCase()}`}
+              href={`#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",

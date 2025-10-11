@@ -862,7 +862,7 @@ export default function Navbar() {
           >
             <a className="navbar-brand" href="/">
               <img
-                src="/Images/agrigrowlogo.png"
+                src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
                 alt="AgriGrow Logo"
                 style={{ height: "55px" }}
                 className="d-inline-block align-text-top"
