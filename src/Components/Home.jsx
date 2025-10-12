@@ -201,7 +201,7 @@ function CategoryGrid() {
     { title: "Spices", image: process.env.PUBLIC_URL +"/Images/spices.jpg", link: ".#/Spices" },
     { title: "Grams/Pulses", image: process.env.PUBLIC_URL +"/Images/pulses.webp", link: ".#/Pulses" },
     { title: "Indoor Plants", image: process.env.PUBLIC_URL +"/Images/plants.jpg", link: ".#/IndoorPlants" },
-    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/sapplings.jpg", link: ".#/Sapplings" },
+    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/Sapplings.jpg", link: ".#/Sapplings" },
   ];
 
   return (
