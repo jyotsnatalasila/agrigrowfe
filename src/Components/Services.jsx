@@ -40,7 +40,7 @@ function Services() {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
+        backgroundImage: `url("/Images/services-bg.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -67,7 +67,7 @@ function Services() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
+            src="/Images/agrigrowlogo.png"
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />

@@ -3,55 +3,55 @@ import Navbar from "./Navbar";
 import { useLocationContext } from "./LocationProvider";
 
 const PULSE = [
-  {
-    id: 700,
-    brand: "Farmer",
-    name: "Kidney Beans(Rajma)",
-    images: [process.env.PUBLIC_URL +"/Images/kidney.jpeg", process.env.PUBLIC_URL +"/Images/kidneyimg2.webp"],
-    itemPrice: 25,
-  },
-  {
-    id: 701,
-    brand: "Farmer",
-    name: "Chickpeas",
-    images: [process.env.PUBLIC_URL +"/Images/chickpeas.webp", process.env.PUBLIC_URL +"/Images/chickpeasimg2.webp"],
-    itemPrice: 44,
-  },
-  {
-    id: 702,
-    brand: "Farmer",
-    name: "Green Gram",
-    images: [process.env.PUBLIC_URL +"/Images/greengram.webp", process.env.PUBLIC_URL +"/Images/greengramimg2.webp"],
-    itemPrice: 23,
-  },
-  {
-    id: 703,
-    brand: "Farmer",
-    name: "Red Lentils",
-    images: [process.env.PUBLIC_URL +"/Images/redlentils.jpg", process.env.PUBLIC_URL +"/Images/redlentilsimg2.jpg"],
-    itemPrice: 42,
-  },
-  {
-    id: 704,
-    brand: "Farmer",
-    name: "Horse Gram",
-    images: [process.env.PUBLIC_URL +"/Images/horsegram.jpg", process.env.PUBLIC_URL +"/Images/horsegram.webp"],
-    itemPrice: 55,
-  },
-  {
-    id: 705,
-    brand: "Farmer",
-    name: "Bengal Gram",
-    images: [process.env.PUBLIC_URL +"/Images/bengalgram.jpg", process.env.PUBLIC_URL +"/Images/bengalgramimg2.jpg"],
-    itemPrice: 80,
-  },
-  {
-    id: 706,
-    brand: "Farmer",
-    name: "Black Beans",
-    images: [process.env.PUBLIC_URL +"/Images/blackbeans.jpg", process.env.PUBLIC_URL +"/Images/blackbeansimg2.jpeg"],
-    itemPrice: 26,
-  },
+{
+  id: 700,
+  brand: "Farmer",
+  name: "Kidney Beans(Rajma)",
+  images: ["/Images/kidney.jpeg", "/Images/kidneyimg2.webp"],
+  itemPrice: 25,
+},
+{
+  id: 701,
+  brand: "Farmer",
+  name: "Chickpeas",
+  images: ["/Images/chickpeas.webp", "/Images/chickpeasimg2.webp"],
+  itemPrice: 44,
+},
+{
+  id: 702,
+  brand: "Farmer",
+  name: "Green Gram",
+  images: ["/Images/greengram.webp", "/Images/greengramimg2.webp"],
+  itemPrice: 23,
+},
+{
+  id: 703,
+  brand: "Farmer",
+  name: "Red Lentils",
+  images: ["/Images/redlentils.jpg", "/Images/redlentilsimg2.jpg"],
+  itemPrice: 42,
+},
+{
+  id: 704,
+  brand: "Farmer",
+  name: "Horse Gram",
+  images: ["/Images/horsegram.jpg", "/Images/horsegram.webp"],
+  itemPrice: 55,
+},
+{
+  id: 705,
+  brand: "Farmer",
+  name: "Bengal Gram",
+  images: ["/Images/bengalgram.jpg", "/Images/bengalgramimg2.jpg"],
+  itemPrice: 80,
+},
+{
+  id: 706,
+  brand: "Farmer",
+  name: "Black Beans",
+  images: ["/Images/blackbeans.jpg", "/Images/blackbeansimg2.jpeg"],
+  itemPrice: 26,
+},
 ];
 
 const starStyle = {

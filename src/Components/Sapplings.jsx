@@ -3,62 +3,62 @@ import Navbar from "./Navbar";
 import { useLocationContext } from "./LocationProvider";
 
 const CORN = [
-  {
-    id: 800,
-    brand: "Farmer",
-    name: "Mango Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/mango.webp", process.env.PUBLIC_URL +"/Images/mango.jpg"],
-    itemPrice: 20,
-  },
-  {
-    id: 801,
-    brand: "Farmer",
-    name: "Guava Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/guavaimg1.jpg", process.env.PUBLIC_URL +"/Images/guavaimg2.jpg"],
-    itemPrice: 15,
-  },
-  {
-    id: 802,
-    brand: "Farmer",
-    name: "Teak Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/teak.webp", process.env.PUBLIC_URL +"/Images/teakimg2.jpg"],
-    itemPrice: 10,
-  },
-  {
-    id: 803,
-    brand: "Farmer",
-    name: "Banyan Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/banyan.jpg", process.env.PUBLIC_URL +"/Images/banyanimg2.jpg"],
-    itemPrice: 30,
-  },
-  {
-    id: 804,
-    brand: "Farmer",
-    name: "Dragon Fruit Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/dragonfruit.webp", process.env.PUBLIC_URL +"/Images/dragonfruit.jpg"],
-    itemPrice: 35,
-  },
-  {
-    id: 805,
-    brand: "Farmer",
-    name: "Fig Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/fig.webp", process.env.PUBLIC_URL +"/Images/figimg2.webp"],
-    itemPrice: 40,
-  },
-  {
-    id: 806,
-    brand: "Farmer",
-    name: "Lemon Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/lemon.webp", process.env.PUBLIC_URL +"/Images/lemon.jpg"],
-    itemPrice: 19,
-  },
-  {
-    id: 807,
-    brand: "Farmer",
-    name: "Broccoli Sappling",
-    images: [process.env.PUBLIC_URL +"/Images/broccoli.jpg", process.env.PUBLIC_URL +"/Images/broccoliimg2.jpg"],
-    itemPrice: 8,
-  },
+{
+  id: 800,
+  brand: "Farmer",
+  name: "Mango Sappling",
+  images: ["/Images/mango.webp", "/Images/mango.jpg"],
+  itemPrice: 20,
+},
+{
+  id: 801,
+  brand: "Farmer",
+  name: "Guava Sappling",
+  images: ["/Images/guavaimg1.jpg", "/Images/guavaimg2.jpg"],
+  itemPrice: 15,
+},
+{
+  id: 802,
+  brand: "Farmer",
+  name: "Teak Sappling",
+  images: ["/Images/teak.webp", "/Images/teakimg2.jpg"],
+  itemPrice: 10,
+},
+{
+  id: 803,
+  brand: "Farmer",
+  name: "Banyan Sappling",
+  images: ["/Images/banyan.jpg", "/Images/banyanimg2.jpg"],
+  itemPrice: 30,
+},
+{
+  id: 804,
+  brand: "Farmer",
+  name: "Dragon Fruit Sappling",
+  images: ["/Images/dragonfruit.webp", "/Images/dragonfruit.jpg"],
+  itemPrice: 35,
+},
+{
+  id: 805,
+  brand: "Farmer",
+  name: "Fig Sappling",
+  images: ["/Images/fig.webp", "/Images/figimg2.webp"],
+  itemPrice: 40,
+},
+{
+  id: 806,
+  brand: "Farmer",
+  name: "Lemon Sappling",
+  images: ["/Images/lemon.webp", "/Images/lemon.jpg"],
+  itemPrice: 19,
+},
+{
+  id: 807,
+  brand: "Farmer",
+  name: "Broccoli Sappling",
+  images: ["/Images/broccoli.jpg", "/Images/broccoliimg2.jpg"],
+  itemPrice: 8,
+},
 ];
 
 const starStyle = {

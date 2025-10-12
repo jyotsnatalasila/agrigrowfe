@@ -5,7 +5,7 @@ const Welcome = () => {
   return (
     <div
       style={{
-        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
+        backgroundImage: 'url("/Images/loginbg.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
@@ -19,7 +19,7 @@ const Welcome = () => {
       }}
     >
       <img
-        src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
+        src="/Images/agrigrowlogo.png"
         alt="AgriGrow Logo"
         style={{
           width: '100px',

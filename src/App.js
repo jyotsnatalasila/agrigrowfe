@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './i18n';
 import Welcome from './Components/Welcome';
@@ -36,12 +36,12 @@ import Product from './Components/Product';
 import ProductPage from './Components/ProductPage';
 import Nuts from './Components/Nuts';
 
-
 function App() {
   return (
     <LocationProvider> 
-      <Router>  {/* REMOVED basename */}
+      <Router>
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -50,7 +50,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          
+
+          {/* Protected Routes with Layout */}
           <Route element={<MainLayout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/rice" element={<Rice />} />
@@ -68,11 +69,11 @@ function App() {
             <Route path="/orders" element={<Orders />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/product/:id" element={<Product />} />
+            <Route path="/product/:productId" element={<ProductPage />} />
             <Route path="/newreleases" element={<NewReleasesPage />} />
             <Route path="/fruits" element={<Fruits />} />
             <Route path="/flowers" element={<Flowers />} />
             <Route path="/aquaticfeed" element={<AquaticFeedPage />} />
-            <Route path="/product/:productId" element={<ProductPage />} />
             <Route path="/nuts" element={<Nuts />} />
           </Route>
         </Routes>

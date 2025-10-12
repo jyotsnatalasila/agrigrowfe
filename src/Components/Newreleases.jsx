@@ -3,41 +3,41 @@ import Navbar from "./Navbar";
 import { useLocationContext } from "./LocationProvider";
 
 const NewReleases = [
-  {
-    id: 201,
-    brand: "Farmer",
-    name: "Organic Chili",
-    images: [process.env.PUBLIC_URL +"/Images/chilli.webp", process.env.PUBLIC_URL +"/Images/chilliimg2.webp"],
-    priceOptions: [{ unit: "item", unitPrice: 180 }],
-  },
-  {
-    id: 202,
-    brand: "Farmer",
-    name: "Blueberry Plant",
-    images: [process.env.PUBLIC_URL +"/Images/blueberry.jpg", process.env.PUBLIC_URL +"/Images/bluberryimg2.jpg"],
-    priceOptions: [{ unit: "item", unitPrice: 120 }],
-  },
-  {
-    id: 203,
-    brand: "Farmer",
-    name: "Honey Melon",
-    images: [process.env.PUBLIC_URL +"/Images/honeymelon.jpg", process.env.PUBLIC_URL +"/Images/honeymelonimg2.webp"],
-    priceOptions: [{ unit: "item", unitPrice: 60 }],
-  },
-  {
-    id: 204,
-    brand: "Farmer",
-    name: "1000 Petals Lotus",
-    images: [process.env.PUBLIC_URL +"/Images/1000petals.webp", process.env.PUBLIC_URL +"/Images/1000petalsimg2.webp"],
-    priceOptions: [{ unit: "item", unitPrice: 150 }],
-  },
-  {
-    id: 205,
-    brand: "Farmer",
-    name: "Lavender Plant",
-    images: [process.env.PUBLIC_URL +"/Images/lavendar.webp", process.env.PUBLIC_URL +"/Images/lavenderimg2.webp"],
-    priceOptions: [{ unit: "item", unitPrice: 90 }],
-  },
+{
+  id: 201,
+  brand: "Farmer",
+  name: "Organic Chili",
+  images: ["/Images/chilli.webp", "/Images/chilliimg2.webp"],
+  priceOptions: [{ unit: "item", unitPrice: 180 }],
+},
+{
+  id: 202,
+  brand: "Farmer",
+  name: "Blueberry Plant",
+  images: ["/Images/blueberry.jpg", "/Images/bluberryimg2.jpg"],
+  priceOptions: [{ unit: "item", unitPrice: 120 }],
+},
+{
+  id: 203,
+  brand: "Farmer",
+  name: "Honey Melon",
+  images: ["/Images/honeymelon.jpg", "/Images/honeymelonimg2.webp"],
+  priceOptions: [{ unit: "item", unitPrice: 60 }],
+},
+{
+  id: 204,
+  brand: "Farmer",
+  name: "1000 Petals Lotus",
+  images: ["/Images/1000petals.webp", "/Images/1000petalsimg2.webp"],
+  priceOptions: [{ unit: "item", unitPrice: 150 }],
+},
+{
+  id: 205,
+  brand: "Farmer",
+  name: "Lavender Plant",
+  images: ["/Images/lavendar.webp", "/Images/lavenderimg2.webp"],
+  priceOptions: [{ unit: "item", unitPrice: 90 }],
+},
 ];
 
 const starStyle = {

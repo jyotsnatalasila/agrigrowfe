@@ -4,15 +4,16 @@ import { useLocationContext } from "./LocationProvider";
 import { FaHeart } from "react-icons/fa";
 
 const CORN = [
-  { id: 70, brand: "Farmer", name: "Dent Corn", images: [process.env.PUBLIC_URL +"/Images/dentcorn.webp", process.env.PUBLIC_URL +"/Images/dentcornimg2.webp"], itemPrice: 25, unit: "item" },
-  { id: 71, brand: "Farmer", name: "Sweet Corn", images: [process.env.PUBLIC_URL +"/Images/sweetcorn.jpg", process.env.PUBLIC_URL +"/Images/sweetcornimg2.jpg"], itemPrice: 20, unit: "item" },
-  { id: 72, brand: "Farmer", name: "Popcorn", images: [process.env.PUBLIC_URL +"/Images/popcorn.jpg", process.env.PUBLIC_URL +"/Images/popcornimg2.webp"], itemPrice: 15, unit: "item" },
-  { id: 73, brand: "Farmer", name: "Black Corn", images: [process.env.PUBLIC_URL +"/Images/glasscorn.jpg", process.env.PUBLIC_URL +"/Images/glasscornimg2.webp"], itemPrice: 40, unit: "item" },
-  { id: 74, brand: "Farmer", name: "Flint Corn", images: [process.env.PUBLIC_URL +"/Images/flintcorn.webp", process.env.PUBLIC_URL +"/Images/flintcornimg2.webp"], itemPrice: 250, unit: "item" },
-  { id: 75, brand: "Farmer", name: "Flour Corn", images: [process.env.PUBLIC_URL +"/Images/flourcorn.jpeg", process.env.PUBLIC_URL +"/Images/flourcornimg2.webp"], itemPrice: 20, unit: "item" },
-  { id: 76, brand: "Farmer", name: "Blue Corn", images: [process.env.PUBLIC_URL +"/Images/cluecorn.jpg", process.env.PUBLIC_URL +"/Images/bluecornimg2.webp"], itemPrice: 100, unit: "item" },
-  { id: 77, brand: "Farmer", name: "Red Corn", images: [process.env.PUBLIC_URL +"/Images/redcorn.webp", process.env.PUBLIC_URL +"/Images/redcornimg2.webp"], itemPrice: 120, unit: "item" },
-  { id: 78, brand: "Farmer", name: "White Corn", images: [process.env.PUBLIC_URL +"/Images/whitecorn.webp", process.env.PUBLIC_URL +"/Images/whitecornimg2.jpg"], itemPrice: 60, unit: "item" },
+  { id: 70, brand: "Farmer", name: "Dent Corn", images: ["/Images/dentcorn.webp", "/Images/dentcornimg2.webp"], itemPrice: 25, unit: "item" },
+{ id: 71, brand: "Farmer", name: "Sweet Corn", images: ["/Images/sweetcorn.jpg", "/Images/sweetcornimg2.jpg"], itemPrice: 20, unit: "item" },
+{ id: 72, brand: "Farmer", name: "Popcorn", images: ["/Images/popcorn.jpg", "/Images/popcornimg2.webp"], itemPrice: 15, unit: "item" },
+{ id: 73, brand: "Farmer", name: "Black Corn", images: ["/Images/glasscorn.jpg", "/Images/glasscornimg2.webp"], itemPrice: 40, unit: "item" },
+{ id: 74, brand: "Farmer", name: "Flint Corn", images: ["/Images/flintcorn.webp", "/Images/flintcornimg2.webp"], itemPrice: 250, unit: "item" },
+{ id: 75, brand: "Farmer", name: "Flour Corn", images: ["/Images/flourcorn.jpeg", "/Images/flourcornimg2.webp"], itemPrice: 20, unit: "item" },
+{ id: 76, brand: "Farmer", name: "Blue Corn", images: ["/Images/cluecorn.jpg", "/Images/bluecornimg2.webp"], itemPrice: 100, unit: "item" },
+{ id: 77, brand: "Farmer", name: "Red Corn", images: ["/Images/redcorn.webp", "/Images/redcornimg2.webp"], itemPrice: 120, unit: "item" },
+{ id: 78, brand: "Farmer", name: "White Corn", images: ["/Images/whitecorn.webp", "/Images/whitecornimg2.jpg"], itemPrice: 60, unit: "item" },
+
 ];
 
 const starStyle = {

@@ -4,77 +4,62 @@ import { useLocationContext } from "./LocationProvider";
 
 const Flowers = [
   {
-    id: 500,
-    brand: "Farmer",
-    name: "Rose Flowers",
-    images: [process.env.PUBLIC_URL +"/Images/rose.jpg", process.env.PUBLIC_URL +"/Images/rose1.jpg"],
-    priceOptions: [
-      { unit: "1 item", unitPrice: 25 },
-    ],
-  },
-  {
-    id: 501,
-    brand: "Blossom",
-    name: "Tulip",
-    images: [process.env.PUBLIC_URL +"/Images/tulip1.jpg", process.env.PUBLIC_URL +"/Images/tulip.jpg"],
-    priceOptions: [
-      { unit: "1 item", unitPrice: 50 },
-    ],
-  },
-  {
-    id: 502,
-    brand: "Blossom",
-    name: "Marigold Garland",
-    images: [process.env.PUBLIC_URL +"/Images/marigold.jpg", process.env.PUBLIC_URL +"/Images/marigold1.jpg"],
-    priceOptions: [
-      { unit: "item", unitPrice: 60 },
-    ],
-  },
-  {
-    id: 503,
-    brand: "Farmer",
-    name: "Orchid",
-    images: [process.env.PUBLIC_URL +"/Images/orchid.jpg", process.env.PUBLIC_URL +"/Images/orchid.webp"],
-    priceOptions: [
-      { unit: "item", unitPrice: 90 },
-    ],
-  },
-  {
-    id: 504,
-    brand: "Blossom",
-    name: "Lily Bouquet",
-    images: [process.env.PUBLIC_URL +"/Images/lilly1.jpg", process.env.PUBLIC_URL +"/Images/lilly.jpg"],
-    priceOptions: [
-      { unit: "bunch", unitPrice: 280 },
-    ],
-  },
-  {
-    id: 505,
-    brand: "Blossom",
-    name: "Jasmine",
-    images: [process.env.PUBLIC_URL +"/Images/jasmine.png", process.env.PUBLIC_URL +"/Images/jasmine.jpg"],
-    priceOptions: [
-      { unit: "grams", unitPrice: 90, gramWeight: 100 },
-    ],
-  },
-   {
-    id: 506,
-    brand: "Blossom",
-    name: "Chrysanthemum",
-    images: [process.env.PUBLIC_URL +"/Images/chrysanthemum.jpg", process.env.PUBLIC_URL +"/Images/chrysanthemum1.jpg"],
-    priceOptions: [
-      { unit: "grams", unitPrice: 100, gramWeight: 100 },
-    ],
-  },
-  {
-    id: 507,
-    brand: "Farmer",
-    name: "Pink Rose",
-    images: [process.env.PUBLIC_URL +"/Images/pinkrose.jpg", process.env.PUBLIC_URL +"/Images/pinkrose1.jpg"],
-    priceOptions: [
-      { unit: "item", unitPrice: 90 },
-    ],
-  },
+  id: 500,
+  brand: "Farmer",
+  name: "Rose Flowers",
+  images: ["/Images/rose.jpg", "/Images/rose1.jpg"],
+  priceOptions: [{ unit: "1 item", unitPrice: 25 }],
+},
+{
+  id: 501,
+  brand: "Farmer",
+  name: "Tulip",
+  images: ["/Images/tulip1.jpg", "/Images/tulip.jpg"],
+  priceOptions: [{ unit: "1 item", unitPrice: 50 }],
+},
+{
+  id: 502,
+  brand: "Farmer",
+  name: "Marigold Garland",
+  images: ["/Images/marigold.jpg", "/Images/marigold1.jpg"],
+  priceOptions: [{ unit: "item", unitPrice: 60 }],
+},
+{
+  id: 503,
+  brand: "Farmer",
+  name: "Orchid",
+  images: ["/Images/orchid.jpg", "/Images/orchid.webp"],
+  priceOptions: [{ unit: "item", unitPrice: 90 }],
+},
+{
+  id: 504,
+  brand: "Farmer",
+  name: "Lily Bouquet",
+  images: ["/Images/lilly1.jpg", "/Images/lilly.jpg"],
+  priceOptions: [{ unit: "bunch", unitPrice: 280 }],
+},
+{
+  id: 505,
+  brand: "Farmer",
+  name: "Jasmine",
+  images: ["/Images/jasmine.png", "/Images/jasmine.jpg"],
+  priceOptions: [{ unit: "grams", unitPrice: 90, gramWeight: 100 }],
+},
+{
+  id: 506,
+  brand: "Farmer",
+  name: "Chrysanthemum",
+  images: ["/Images/chrysanthemum.jpg", "/Images/chrysanthemum1.jpg"],
+  priceOptions: [{ unit: "grams", unitPrice: 100, gramWeight: 100 }],
+},
+{
+  id: 507,
+  brand: "Farmer",
+  name: "Pink Rose",
+  images: ["/Images/pinkrose.jpg", "/Images/pinkrose1.jpg"],
+  priceOptions: [{ unit: "item", unitPrice: 90 }],
+},
+
 ];
 
 const starStyle = {

@@ -3,20 +3,20 @@ import Navbar from "./Navbar";
 import { useLocationContext } from "./LocationProvider";
 
 const NUTS = [
-  {
-    id: 1110,
-    brand: "Farmer",
-    name: "Premium Pistachios",
-    images: [process.env.PUBLIC_URL +"/Images/pista.webp", process.env.PUBLIC_URL +"/Images/pistachio.jpg"],
-    itemPrice: 800,
-  },
-  {
-    id: 1111,
-    brand: "Farmer",
-    name: "Almonds",
-    images: [process.env.PUBLIC_URL +"/Images/almond.webp", process.env.PUBLIC_URL +"/Images/almond1.jpg"],
-    itemPrice: 600,
-  },
+{
+  id: 1110,
+  brand: "Farmer",
+  name: "Premium Pistachios",
+  images: ["/Images/pista.webp", "/Images/pistachio.jpg"],
+  itemPrice: 800,
+},
+{
+  id: 1111,
+  brand: "Farmer",
+  name: "Almonds",
+  images: ["/Images/almond.webp", "/Images/almond1.jpg"],
+  itemPrice: 600,
+},
 ];
 
 const starStyle = {

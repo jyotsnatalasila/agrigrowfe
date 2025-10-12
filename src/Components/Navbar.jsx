@@ -654,15 +654,15 @@ function CategoryBar() {
         <a href="/home" className="category-link">
           <FaHome className="category-icon" /> Home
         </a>
-        <a href="#/bestsellers" className="category-link">Best Sellers</a>
-        <a href="#/todaydeals" className="category-link">Today's Deals</a>
-        <a href="#/newreleases" className="category-link">New Releases</a>
-        <a href="#/lotus" className="category-link">Lotus</a>
-        <a href="#/fruits" className="category-link">Fruits</a>
-        <a href="#/flowers" className="category-link">Flowers</a>
-        <a href="#/vegetables" className="category-link">Vegetables</a>
-        <a href="#/aquaticfeed" className="category-link">Aquatic Feed</a>
-        <a href="#/sapplings" className="category-link">Seeds & Saplings</a>
+        <a href="/bestsellers" className="category-link">Best Sellers</a>
+        <a href="/todaydeals" className="category-link">Today's Deals</a>
+        <a href="/newreleases" className="category-link">New Releases</a>
+        <a href="/lotus" className="category-link">Lotus</a>
+        <a href="/fruits" className="category-link">Fruits</a>
+        <a href="/flowers" className="category-link">Flowers</a>
+        <a href="/vegetables" className="category-link">Vegetables</a>
+        <a href="/aquaticfeed" className="category-link">Aquatic Feed</a>
+        <a href="/sapplings" className="category-link">Seeds & Saplings</a>
         <div 
           ref={allMenuRef}
           className="category-link"
@@ -862,7 +862,7 @@ export default function Navbar() {
           >
             <a className="navbar-brand" href="/">
               <img
-                src={`${process.env.PUBLIC_URL}/Images/agrigrowlogo.png`}
+                src="/Images/agrigrowlogo.png"
                 alt="AgriGrow Logo"
                 style={{ height: "55px" }}
                 className="d-inline-block align-text-top"
