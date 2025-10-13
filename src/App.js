@@ -36,7 +36,7 @@ import Product from './Components/Product';
 import ProductPage from './Components/ProductPage';
 import Nuts from './Components/Nuts';
 
-function App() 
+function App() {  // ← ADDED THE MISSING { HERE
   const getBasename = () => {
     if (window.location.pathname.startsWith('/agrigrowfe')) {
       return '/agrigrowfe';
