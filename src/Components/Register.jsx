@@ -43,7 +43,7 @@ const Register = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("/Images/loginbg.jpg")`,
+        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -72,7 +72,7 @@ const Register = () => {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -279,7 +279,7 @@ const Register = () => {
           <div style={{ marginTop: "14px", fontSize: "13px", textAlign: "center" }}>
             Already have an account?{" "}
             <a
-              href="/login"
+              href="#/login"
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",

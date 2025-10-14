@@ -31,8 +31,7 @@ function Contact() {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("/Images/loginbg.jpg")`,
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
@@ -57,7 +56,7 @@ function Contact() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: 60 }}
           />

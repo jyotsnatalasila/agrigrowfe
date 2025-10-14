@@ -5,7 +5,7 @@ function About() {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("/Images/loginbg.jpg")`,
+        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -32,7 +32,7 @@ function About() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />

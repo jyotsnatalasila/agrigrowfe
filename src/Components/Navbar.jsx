@@ -862,7 +862,7 @@ export default function Navbar() {
           >
             <a className="navbar-brand" href="/">
               <img
-                src="/Images/agrigrowlogo.png"
+                src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
                 alt="AgriGrow Logo"
                 style={{ height: "55px" }}
                 className="d-inline-block align-text-top"
@@ -998,11 +998,11 @@ export default function Navbar() {
           {/* THIRD COLUMN: Returns & Orders, Cart, Notifications, Wishlist, User */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '40px', marginLeft: GAP_LANGUAGE_TO_RETURNS }}>
             {/* Returns & Orders - forced to single line */}
-            <a href="/orders" style={{ color: '#fff', fontWeight: '650', textDecoration: 'none', display: 'inline-block', fontSize: '16px', lineHeight: '1.2', whiteSpace: 'nowrap', textAlign: 'center', marginRight: GAP_RETURNS_TO_CART }}>
+            <a href="#/orders" style={{ color: '#fff', fontWeight: '650', textDecoration: 'none', display: 'inline-block', fontSize: '16px', lineHeight: '1.2', whiteSpace: 'nowrap', textAlign: 'center', marginRight: GAP_RETURNS_TO_CART }}>
               Returns & Orders
             </a>
             
-            <a href="/cart" style={{ position: 'relative', display: 'inline-block', cursor: 'pointer', color: 'white', textDecoration: 'none', marginRight: `${GAP_RETURNS_TO_CART}px` }} title={t('navbar.viewCart')}>
+            <a href="#/cart" style={{ position: 'relative', display: 'inline-block', cursor: 'pointer', color: 'white', textDecoration: 'none', marginRight: `${GAP_RETURNS_TO_CART}px` }} title={t('navbar.viewCart')}>
               <FaShoppingCart size="1.8em" />
               {totalUniqueItems > 0 && (
                 <span

@@ -47,7 +47,7 @@ const Login = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("/Images/loginbg.jpg")`,
+        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -76,7 +76,7 @@ const Login = () => {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src="/Images/agrigrowlogo.png"
+            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -254,7 +254,7 @@ const Login = () => {
           <div style={{ marginTop: "14px", fontSize: "13px" }}>
             Don't have an account?{" "}
             <a
-              href="/register"
+              href="#/register"
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",

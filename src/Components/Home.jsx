@@ -11,25 +11,25 @@ import {
 } from "react-icons/fa";
 
 const carouselSlides = [
-  { id: 1, image: "/Images/Slide4.png", alt: "Fresh Vegetables" },
-  { id: 2, image: "/Images/Slide5.png", alt: "Agricultural Field" },
-  { id: 3, image: "/Images/Slide1.png", alt: "Fresh Fruits" },
-  { id: 4, image: "/Images/Slide2 (1).png", alt: "Farming Equipment" },
-  { id: 5, image: "/Images/Slide3.png", alt: "Seeds and Planting" },
+  { id: 1, image: process.env.PUBLIC_URL +"/Images/Slide4.png", alt: "Fresh Vegetables" },
+  { id: 2, image: process.env.PUBLIC_URL +"/Images/Slide5.png", alt: "Agricultural Field" },
+  { id: 3, image: process.env.PUBLIC_URL +"/Images/Slide1.png", alt: "Fresh Fruits" },
+  { id: 4, image: process.env.PUBLIC_URL +"/Images/Slide2 (1).png", alt: "Farming Equipment" },
+  { id: 5, image: process.env.PUBLIC_URL +"/Images/Slide3.png", alt: "Seeds and Planting" },
 ];
 
 const SCROLL_PRODUCTS = [
-  { img: "/Images/guava.jpg", alt: "Guava", link: "/product/406" },
-  { img: "/Images/pinkrose.jpg", alt: "Pink Rose", link: "/product/507" },
-  { img: "/Images/kiwi.jpg", alt: "Kiwi", link: "/product/407" },
-  { img: "/Images/potato.jpeg", alt: "Potatoes", link: "/product/214" },
-  { img: "/Images/cashew.webp", alt: "Cashews", link: "/product/408" },
-  { img: "/Images/grapes.jpg", alt: "Grapes", link: "/product/409" },
-  { img: "/Images/pista.webp", alt: "Pistachios", link: "/product/1110" },
-  { img: "/Images/blueberries.webp", alt: "Blueberries", link: "/product/410" },
-  { img: "/Images/almond.webp", alt: "Almonds", link: "/product/1111" },
-  { img: "/Images/blackberries.jpg", alt: "Blackberries", link: "/product/411" },
-  { img: "/Images/strawberry.jpg", alt: "Strawberries", link: "/product/405" },
+  { img: process.env.PUBLIC_URL +"/Images/guava.jpg", alt: "Guava", link: "/product/406" },
+  { img: process.env.PUBLIC_URL +"/Images/pinkrose.jpg", alt: "Pink Rose", link: "/product/507" },
+  { img: process.env.PUBLIC_URL +"/Images/kiwi.jpg", alt: "Kiwi", link: "/product/407" },
+  { img: process.env.PUBLIC_URL +"/Images/potato.jpeg", alt: "Potatoes", link: "/product/214" },
+  { img: process.env.PUBLIC_URL +"/Images/cashew.webp", alt: "Cashews", link: "/product/408" },
+  { img: process.env.PUBLIC_URL +"/Images/grapes.jpg", alt: "Grapes", link: "/product/409" },
+  { img: process.env.PUBLIC_URL +"/Images/pista.webp", alt: "Pistachios", link: "/product/1110" },
+  { img: process.env.PUBLIC_URL +"/Images/blueberries.webp", alt: "Blueberries", link: "/product/410" },
+  { img: process.env.PUBLIC_URL +"/Images/almond.webp", alt: "Almonds", link: "/product/1111" },
+  { img: process.env.PUBLIC_URL +"/Images/blackberries.jpg", alt: "Blackberries", link: "/product/411" },
+  { img: process.env.PUBLIC_URL +"/Images/strawberry.jpg", alt: "Strawberries", link: "/product/405" },
 ];
 
 function ReactCarousel() {

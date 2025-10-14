@@ -7,14 +7,14 @@ const AquaticFeed = [
   id: 900,
   brand: "AquaPro",
   name: "Fish Pellet Feed",
-  images: ["/Images/fishpellet.jpg", "/Images/fishpellet.avif"],
+  images: [process.env.PUBLIC_URL +"/Images/fishpellet.jpg", process.env.PUBLIC_URL +"/Images/fishpellet.avif"],
   priceOptions: [{ unit: "kg", unitPrice: 120 }],
 },
 {
   id: 901,
   brand: "AquaPro",
   name: "Shrimp Starter Feed",
-  images: ["/Images/shrimp.webp"],
+  images: [process.env.PUBLIC_URL +"/Images/shrimp.webp"],
   priceOptions: [{ unit: "kg", unitPrice: 250 }],
 },
 ];

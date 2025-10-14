@@ -1,0 +1,12 @@
+FROM node:20-alpine AS builder
+WORKDIR /agrigrowapp
+COPY package*.json ./
+RUN npm ci --legacy-peer-deps
+COPY . . 
+RUN npm run build 
+
+FROM nginx:alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=builder /agrigrowapp/build /usr/share/nginx/html
+EXPOSE 4000
+CMD ["nginx", "-g", "daemon off;"]

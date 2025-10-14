@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import './i18n';
 import Welcome from './Components/Welcome';
@@ -76,6 +76,9 @@ function App() {
             <Route path="/aquaticfeed" element={<AquaticFeedPage />} />
             <Route path="/nuts" element={<Nuts />} />
           </Route>
+
+          {/* Catch all route - redirect to welcome */}
+          <Route path="*" element={<Welcome />} />
         </Routes>
       </Router>
     </LocationProvider>
