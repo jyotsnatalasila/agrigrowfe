@@ -651,7 +651,7 @@ function CategoryBar() {
 
       `}</style>
       <div className="category-bar">
-        <a href="/home" className="category-link">
+        <a href="#/home" className="category-link">
           <FaHome className="category-icon" /> Home
         </a>
         <a href="#/bestsellers" className="category-link">Best Sellers</a>
