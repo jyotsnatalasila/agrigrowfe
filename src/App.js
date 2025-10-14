@@ -36,10 +36,17 @@ import Product from './Components/Product';
 import ProductPage from './Components/ProductPage';
 import Nuts from './Components/Nuts';
 
-function App() {
+function App() {  // ← ADDED THE MISSING { HERE
+  const getBasename = () => {
+    if (window.location.pathname.startsWith('/agrigrowfe')) {
+      return '/agrigrowfe';
+    }
+    return '/';
+  };
+
   return (
     <LocationProvider> 
-      <Router>
+      <Router basename={getBasename()}>
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Welcome />} />
@@ -76,8 +83,11 @@ function App() {
             <Route path="/aquaticfeed" element={<AquaticFeedPage />} />
             <Route path="/nuts" element={<Nuts />} />
           </Route>
+<<<<<<< HEAD
 
           {/* Catch all route - redirect to welcome */}
+=======
+>>>>>>> a8f6e508b94aa19de54c26c47265945eff6186dc
           <Route path="*" element={<Welcome />} />
         </Routes>
       </Router>
