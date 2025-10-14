@@ -91,7 +91,7 @@ const Register = () => {
           {["Home", "Services", "Contact", "About", "Login"].map((link) => (
             <a
               key={link}
-              href={`/${link.toLowerCase()}`}
+              href={`#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",

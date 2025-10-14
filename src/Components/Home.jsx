@@ -19,22 +19,23 @@ const carouselSlides = [
 ];
 
 const SCROLL_PRODUCTS = [
-  { img: process.env.PUBLIC_URL +"/Images/guava.jpg", alt: "Guava", link: "/product/406" },
-  { img: process.env.PUBLIC_URL +"/Images/pinkrose.jpg", alt: "Pink Rose", link: "/product/507" },
-  { img: process.env.PUBLIC_URL +"/Images/kiwi.jpg", alt: "Kiwi", link: "/product/407" },
-  { img: process.env.PUBLIC_URL +"/Images/potato.jpeg", alt: "Potatoes", link: "/product/214" },
-  { img: process.env.PUBLIC_URL +"/Images/cashew.webp", alt: "Cashews", link: "/product/408" },
-  { img: process.env.PUBLIC_URL +"/Images/grapes.jpg", alt: "Grapes", link: "/product/409" },
-  { img: process.env.PUBLIC_URL +"/Images/pista.webp", alt: "Pistachios", link: "/product/1110" },
-  { img: process.env.PUBLIC_URL +"/Images/blueberries.webp", alt: "Blueberries", link: "/product/410" },
-  { img: process.env.PUBLIC_URL +"/Images/almond.webp", alt: "Almonds", link: "/product/1111" },
-  { img: process.env.PUBLIC_URL +"/Images/blackberries.jpg", alt: "Blackberries", link: "/product/411" },
-  { img: process.env.PUBLIC_URL +"/Images/strawberry.jpg", alt: "Strawberries", link: "/product/405" },
+  { img: process.env.PUBLIC_URL +"/Images/guava.jpg", alt: "Guava", link: "#/product/406" },
+  { img: process.env.PUBLIC_URL +"/Images/pinkrose.jpg", alt: "Pink Rose", link: "#/product/507" },
+  { img: process.env.PUBLIC_URL +"/Images/kiwi.jpg", alt: "Kiwi", link: "#/product/407" },
+  { img: process.env.PUBLIC_URL +"/Images/potato.jpeg", alt: "Potatoes", link: "#/product/214" },
+  { img: process.env.PUBLIC_URL +"/Images/cashew.webp", alt: "Cashews", link: "#/product/408" },
+  { img: process.env.PUBLIC_URL +"/Images/grapes.jpg", alt: "Grapes", link: "#/product/409" },
+  { img: process.env.PUBLIC_URL +"/Images/pista.webp", alt: "Pistachios", link: "#/product/1110" },
+  { img: process.env.PUBLIC_URL +"/Images/blueberries.webp", alt: "Blueberries", link: "#/product/410" },
+  { img: process.env.PUBLIC_URL +"/Images/almond.webp", alt: "Almonds", link: "#/product/1111" },
+  { img: process.env.PUBLIC_URL +"/Images/blackberries.jpg", alt: "Blackberries", link: "#/product/411" },
+  { img: process.env.PUBLIC_URL +"/Images/strawberry.jpg", alt: "Strawberries", link: "#/product/405" },
 ];
 
 function ReactCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef(null);
+  const slidesContainerRef = useRef(null); // ADDED: ref for slides container
 
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -55,7 +56,7 @@ function ReactCarousel() {
       <style>{`
         .carousel-container {
           position: relative;
-          width: 98%;
+          width: 100%; /* CHANGED: from 98% to 100% to fill available space */
           max-width: 1800px;
           height: 600px;
           overflow: hidden;
@@ -68,12 +69,14 @@ function ReactCarousel() {
           display: flex;
           transition: transform 0.9s ease-in-out;
           height: 100%;
+          width: 100%; /* ADDED: ensure full width */
         }
 
         .carousel-slide {
           min-width: 100%;
           height: 100%;
           position: relative;
+          flex-shrink: 0; /* ADDED: prevent slides from shrinking */
         }
 
         .carousel-slide img {
@@ -160,6 +163,7 @@ function ReactCarousel() {
       `}</style>
       <div className="carousel-container">
         <div
+          ref={slidesContainerRef} // ADDED: ref for the slides container
           className="carousel-slides"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
@@ -487,13 +491,15 @@ function HomeContent() {
     <>
       <Navbar />
 
+      {/* CHANGED: Removed extra wrapper div and simplified structure */}
       <div
         style={{
           width: '100%',
           maxWidth: '1920px',
           margin: '0 auto', 
-          padding: '0 20px',
-          paddingTop: '135px' 
+          padding: '0 22px',
+          paddingTop: '135px',
+          boxSizing: 'border-box' // ADDED: ensure padding is included in width calculation
         }}
       >
         <ReactCarousel />
