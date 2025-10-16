@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// Base URL configuration
+const API_BASE_URL = 'http://localhost:1010/agrigrowbe';
+
 function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ 
+    name: "", 
+    email: "", 
+    subject: "", 
+    message: "" 
+  });
   const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -13,17 +22,42 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus(null);
+    setLoading(true);
+    
     try {
-      await axios.post("http://localhost:1010/api/contact", {
+      console.log("Sending contact form data:", formData);
+      
+      const response = await axios.post(`${API_BASE_URL}/api/contact`, {
         name: formData.name,
         email: formData.email,
-        subject: "Contact Form Submission",
+        subject: formData.subject,
         message: formData.message,
       });
-      setStatus("Your message has been sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      
+      console.log("Contact form response:", response.data);
+      
+      let successMessage = "Your message has been sent successfully! ";
+      
+      // Check email sending status
+      if (response.data.adminEmailSent === false) {
+        successMessage += "(But admin notification failed) ";
+      }
+      if (response.data.userAckSent === false) {
+        successMessage += "(But auto-reply failed) ";
+      }
+      
+      if (response.data.adminEmailSent && response.data.userAckSent) {
+        successMessage += "You should receive an auto-reply confirmation email shortly.";
+      }
+      
+      setStatus(successMessage);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      
     } catch (err) {
+      console.error("Contact form error:", err);
       setStatus("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -32,6 +66,7 @@ function Contact() {
       style={{
         fontFamily: '"Segoe UI", sans-serif',
         backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
+        backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
@@ -39,7 +74,7 @@ function Contact() {
         color: "#2e4c20",
       }}
     >
-      {/* Navbar (same as before) */}
+      {/* Navbar */}
       <nav
         style={{
           position: "sticky",
@@ -56,7 +91,7 @@ function Contact() {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
+            src={process.env.PUBLIC_URL + "/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: 60 }}
           />
@@ -75,7 +110,7 @@ function Contact() {
           {["Home", "Services", "About", "Contact"].map((link) => (
             <a
               key={link}
-              href={`#/${link.toLowerCase()}`}
+              href={`${process.env.PUBLIC_URL}/#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",
@@ -194,6 +229,26 @@ function Contact() {
               onFocus={e => (e.target.style.borderColor = "#2e7d32")}
               onBlur={e => (e.target.style.borderColor = "#ccc")}
             />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              required
+              style={{
+                marginBottom: 16,
+                padding: 12,
+                borderRadius: 8,
+                border: "1px solid #ccc",
+                outline: "none",
+                fontSize: 16,
+                fontFamily: "inherit",
+                transition: "border-color 0.3s",
+              }}
+              onFocus={e => (e.target.style.borderColor = "#2e7d32")}
+              onBlur={e => (e.target.style.borderColor = "#ccc")}
+            />
             <textarea
               name="message"
               placeholder="Your Message"
@@ -217,23 +272,39 @@ function Contact() {
             />
             <button
               type="submit"
+              disabled={loading}
               style={{
-                backgroundColor: "#2e7d32",
+                backgroundColor: loading ? "#6c757d" : "#2e7d32",
                 color: "#fff",
                 padding: 14,
                 border: "none",
                 borderRadius: 8,
                 fontSize: 18,
-                cursor: "pointer",
+                cursor: loading ? "not-allowed" : "pointer",
                 fontWeight: "600",
                 transition: "background-color 0.3s",
+                opacity: loading ? 0.7 : 1,
               }}
-              onMouseOver={e => (e.target.style.backgroundColor = "#246324")}
-              onMouseOut={e => (e.target.style.backgroundColor = "#2e7d32")}
+              onMouseOver={e => {
+                if (!loading) e.target.style.backgroundColor = "#246324";
+              }}
+              onMouseOut={e => {
+                if (!loading) e.target.style.backgroundColor = "#2e7d32";
+              }}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
-            {status && <p style={{ marginTop: 16, color: "#2e7d32" }}>{status}</p>}
+            {status && (
+              <p style={{ 
+                marginTop: 16, 
+                color: status.includes("Failed") ? "#dc3545" : "#2e7d32",
+                fontWeight: "bold",
+                fontSize: "14px",
+                lineHeight: "1.4"
+              }}>
+                {status}
+              </p>
+            )}
           </form>
         </div>
       </main>

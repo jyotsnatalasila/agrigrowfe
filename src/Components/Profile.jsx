@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLocationContext } from './LocationProvider';
 
+// Base URL configuration
+const API_BASE_URL = 'http://localhost:1010/agrigrowbe';
+
 export default function Profile() {
   const { user, setUser } = useLocationContext();
   const [loading, setLoading] = useState(false);
@@ -18,40 +21,115 @@ export default function Profile() {
   const [message, setMessage] = useState(null);
   const [isSaved, setIsSaved] = useState(false); 
 
-  useEffect(() => {
+  // Debug function to test token first
+  const testToken = async () => {
     const token = localStorage.getItem('token');
-    if (token) {
-      setLoading(true);
-      fetch('http://localhost:1010/api/user/profile', { 
-        headers: { Authorization: `Bearer ${token}` } 
-      })
-        .then(r => {
-          if (!r.ok) throw new Error('Failed to fetch profile');
-          return r.json();
-        })
-        .then(data => {
-          console.log('Profile data fetched:', data);
-          setUser && setUser(data);
-          setForm({
-            fullName: data.fullName || '',
-            phone: data.phone || '',
-            addressLine1: data.addressLine1 || '',
-            addressLine2: data.addressLine2 || '',
-            colony: data.colony || '',
-            city: data.city || '',
-            state: data.state || '',
-            postalCode: data.postalCode || '',
-            country: data.country || ''
-          });
-          setIsSaved(true); 
-        })
-        .catch((error) => {
-          console.error('Error fetching profile:', error);
-          setMessage('Error loading profile: ' + error.message);
-          setIsSaved(false);
-        })
-        .finally(() => setLoading(false));
+    if (!token) {
+      console.log('No token found in localStorage');
+      return false;
     }
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/auth/test-auth`, {
+        headers: { 
+          'Authorization': `Bearer ${token}` 
+        }
+      });
+      
+      console.log('Test auth response status:', response.status);
+      
+      if (!response.ok) {
+        console.log('Test auth failed with status:', response.status);
+        return false;
+      }
+      
+      const result = await response.json();
+      console.log('Token validation result:', result);
+      return result.authenticated === true;
+    } catch (error) {
+      console.error('Error validating token:', error);
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        setMessage('Please login to view your profile');
+        return;
+      }
+
+      console.log('Token found:', token.substring(0, 20) + '...');
+
+      // First check if token is valid
+      const isValid = await testToken();
+      console.log('Token validation result:', isValid);
+      
+      if (!isValid) {
+        setMessage('Your session has expired. Please login again.');
+        localStorage.removeItem('token');
+        return;
+      }
+
+      setLoading(true);
+      try {
+        // ✅ CORRECTED: Changed from /api/auth/user/profile to /api/auth/profile
+        console.log('Fetching profile from:', `${API_BASE_URL}/api/auth/profile`);
+        
+        const response = await fetch(`${API_BASE_URL}/api/auth/profile`, { 
+          headers: { 
+            'Authorization': `Bearer ${token}` 
+          } 
+        });
+        
+        console.log('Profile response status:', response.status);
+        console.log('Profile response headers:', response.headers);
+        
+        if (response.status === 403 || response.status === 401) {
+          const errorText = await response.text();
+          console.log('Auth error response:', errorText);
+          throw new Error('Access forbidden - invalid or expired token');
+        }
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.log('Profile error response:', errorText);
+          throw new Error(`HTTP ${response.status}: Failed to fetch profile`);
+        }
+        
+        const data = await response.json();
+        console.log('Profile data fetched:', data);
+        
+        setUser && setUser(data);
+        setForm({
+          fullName: data.fullName || '',
+          phone: data.phone || '',
+          addressLine1: data.addressLine1 || '',
+          addressLine2: data.addressLine2 || '',
+          colony: data.colony || '',
+          city: data.city || '',
+          state: data.state || '',
+          postalCode: data.postalCode || '',
+          country: data.country || ''
+        });
+        setIsSaved(true); 
+        
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+        setMessage('Error loading profile: ' + error.message);
+        setIsSaved(false);
+        
+        // If it's an authentication error, clear the token
+        if (error.message.includes('forbidden') || error.message.includes('403') || error.message.includes('401')) {
+          localStorage.removeItem('token');
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
   }, [setUser]);
 
   const handleChange = (k, v) => {
@@ -61,18 +139,34 @@ export default function Profile() {
 
   const handleSave = async () => {
     const token = localStorage.getItem('token');
-    if (!token) return setMessage('You must be logged in to update profile');
+    if (!token) {
+      setMessage('You must be logged in to update profile');
+      return;
+    }
+    
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:1010/api/user/profile', {
+      // ✅ CORRECTED: Changed from /api/auth/user/profile to /api/auth/profile
+      console.log('Saving profile to:', `${API_BASE_URL}/api/auth/profile`);
+      
+      const res = await fetch(`${API_BASE_URL}/api/auth/profile`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${token}` 
+        },
         body: JSON.stringify(form)
       });
       
+      console.log('Save profile response status:', res.status);
+      
+      if (res.status === 403 || res.status === 401) {
+        throw new Error('Access forbidden - please login again');
+      }
+      
       if (!res.ok) {
         const text = await res.text();
-        console.error('Profile save failed', res.status, text);
+        console.log('Save profile error response:', text);
         let messageBody = text;
         try {
           const parsed = JSON.parse(text);
@@ -85,6 +179,7 @@ export default function Profile() {
       
       const response = await res.json();
       console.log('Profile update response:', response);
+      
       if (setUser) {
         setUser(response);
       }
@@ -107,6 +202,11 @@ export default function Profile() {
       console.error('Error saving profile', e);
       setMessage('Error saving profile: ' + (e.message || 'unknown'));
       setIsSaved(false);
+      
+      // Clear token if it's an auth error
+      if (e.message.includes('forbidden') || e.message.includes('403') || e.message.includes('401')) {
+        localStorage.removeItem('token');
+      }
     } finally { 
       setLoading(false); 
     }
@@ -131,11 +231,43 @@ export default function Profile() {
     setIsSaved(false);
   };
 
+  // Add login redirect
+  const handleLoginRedirect = () => {
+    window.location.href = '/#/login';
+  };
+
   if (loading) return <div style={{ padding: 20 }}>Loading profile...</div>;
 
   return (
     <div style={{ padding: 120}}>
       <h2>My Profile</h2>
+      
+      {message && (message.includes('login') || message.includes('expired')) && (
+        <div style={{ 
+          marginBottom: 20, 
+          padding: 15, 
+          background: '#fff3cd', 
+          border: '1px solid #ffeaa7',
+          borderRadius: 8
+        }}>
+          <p>{message}</p>
+          <button 
+            onClick={handleLoginRedirect}
+            style={{
+              background: '#2e7d32',
+              color: 'white',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: 4,
+              cursor: 'pointer',
+              marginTop: '10px'
+            }}
+          >
+            Go to Login
+          </button>
+        </div>
+      )}
+      
       <div style={{ maxWidth: 760, marginTop: 0}}>
         <label style={{ display: 'block', marginTop: 12 }}>Full name <span style={{ color: 'red' }}>*</span></label>
         <input 
@@ -173,7 +305,7 @@ export default function Profile() {
           }} 
         />
 
-  <label style={{ display: 'block', marginTop: 12 }}>Address line 2</label>
+        <label style={{ display: 'block', marginTop: 12 }}>Address line 2</label>
         <input 
           value={form.addressLine2} 
           onChange={e => handleChange('addressLine2', e.target.value)} 
@@ -185,7 +317,7 @@ export default function Profile() {
           }} 
         />
 
-  <label style={{ display: 'block', marginTop: 12 }}>Colony / Line</label>
+        <label style={{ display: 'block', marginTop: 12 }}>Colony / Line</label>
         <input 
           value={form.colony} 
           onChange={e => handleChange('colony', e.target.value)} 
@@ -283,7 +415,7 @@ export default function Profile() {
             Clear
           </button>
         </div>
-        {message && (
+        {message && !message.includes('login') && !message.includes('expired') && (
           <div style={{ 
             marginTop: 12, 
             color: message.includes('Error') ? 'red' : '#2f6920',

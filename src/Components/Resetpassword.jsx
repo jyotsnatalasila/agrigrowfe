@@ -31,7 +31,7 @@ const ResetPassword = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:1010/api/password/reset?token=${encodeURIComponent(token)}`,
+        `/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
         { password: newPassword }
       );
 
@@ -49,7 +49,7 @@ const ResetPassword = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
+        backgroundImage: 'url("/Images/loginbg.jpg")',
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -78,7 +78,7 @@ const ResetPassword = () => {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
+            src="/Images/agrigrowlogo.png"
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -194,7 +194,7 @@ const ResetPassword = () => {
           <div style={{ marginTop: "14px", fontSize: "13px" }}>
             Remember your password?{" "}
             <a
-              href="#/login"
+              href={process.env.PUBLIC_URL + '/#/login'}
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",

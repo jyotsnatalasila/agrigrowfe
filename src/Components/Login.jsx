@@ -1,36 +1,22 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { LocationContext } from './LocationProvider';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // move hook to component top-level to satisfy rules-of-hooks
-  const { setUser } = useContext(LocationContext) || {};
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:1010/api/auth/login", {
+      const res = await axios.post("/agrigrowbe/api/auth/login", {
         email,
         password,
       });
       const token = res.data?.token;
       if (token) {
         localStorage.setItem("token", token);
-        // fetch profile
-        try {
-          const profileRes = await axios.get('http://localhost:1010/api/user/profile', { headers: { Authorization: `Bearer ${token}` } });
-          const profile = profileRes.data;
-          // set profile in global context
-          if (profile && typeof setUser === 'function') {
-            setUser(profile);
-          }
-        } catch (err) {
-          console.warn('Could not fetch profile after login', err?.response?.data || err.message);
-        }
         alert("Login successful");
         navigate("/home");
       } else {
@@ -76,7 +62,7 @@ const Login = () => {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
+            src={process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -92,7 +78,7 @@ const Login = () => {
             minWidth: 0,
           }}
         >
-          {["Home", "Services", "Contact", "About"].map((link) => (
+          {['Home', 'Services', 'Contact', 'About'].map((link) => (
             <a
               key={link}
               href={`#/${link.toLowerCase()}`}
@@ -213,7 +199,7 @@ const Login = () => {
               <input type="checkbox" /> Remember me
             </label>
             <a
-              href="/Forgotpassword"
+              href={process.env.PUBLIC_URL + '#/forgotpassword'}
               style={{
                 color: "#2e7d32",
                 textDecoration: "underline",
@@ -254,7 +240,7 @@ const Login = () => {
           <div style={{ marginTop: "14px", fontSize: "13px" }}>
             Don't have an account?{" "}
             <a
-              href="#/register"
+              href={process.env.PUBLIC_URL + '#/register'}
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",

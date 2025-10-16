@@ -9,7 +9,7 @@ export default function SearchResultCard({ item, onClick }) {
 
   return (
     <div onClick={() => onClick && onClick(item)} style={{ display: 'flex', gap: 12, padding: 10, alignItems: 'center', cursor: 'pointer', background: cardBg }}>
-      <img src={(item.images && item.images[0]) || item.image || '/Images/1000petals.webp'} alt={item.name} style={{ width: 72, height: 60, objectFit: 'cover', borderRadius: 8 }} />
+      <img src={(item.images && item.images[0]) || item.image || (process.env.PUBLIC_URL + '/Images/1000petals.webp')} alt={item.name} style={{ width: 72, height: 60, objectFit: 'cover', borderRadius: 8 }} />
       <div style={{ flex: 1 }}>
         <div style={{ fontWeight: 800, color: darkTheme ? '#8dc63f' : '#2f6920' }}>{item.name}</div>
         <div style={{ fontSize: 12, color: darkTheme ? '#ccc' : '#666' }}>{item.category || ''}</div>

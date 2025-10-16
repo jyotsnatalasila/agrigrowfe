@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:1010/api/password/forgot",
+        "/agrigrowbe/api/password/forgot",
         { email: email }
       );
 
@@ -32,7 +32,7 @@ const ForgotPassword = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
+        backgroundImage: 'url("/Images/loginbg.jpg")',
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -61,7 +61,7 @@ const ForgotPassword = () => {
       >
         <div className="logo" style={{ flexShrink: 0 }}>
           <img
-            src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
+            src={process.env.PUBLIC_URL + "/Images/agrigrowlogo.png"}
             alt="AgriGrow Logo"
             style={{ height: "60px" }}
           />
@@ -80,7 +80,7 @@ const ForgotPassword = () => {
           {["Home", "Services", "Contact", "About", "Login"].map((link) => (
             <a
               key={link}
-              href={`#/${link.toLowerCase()}`}
+        href={`${process.env.PUBLIC_URL}/#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",
@@ -186,7 +186,7 @@ const ForgotPassword = () => {
         <div style={{ marginTop: "18px", fontSize: "12px", color: "#333", textAlign: "center" }}>
           Remember your password?{" "}
           <a
-            href="/login"
+            href={process.env.PUBLIC_URL + '/#/login'}
             style={{
               color: "#2e7d32",
               textDecoration: "none",

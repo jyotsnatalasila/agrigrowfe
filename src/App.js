@@ -35,6 +35,7 @@ import Profile from './Components/Profile';
 import Product from './Components/Product';
 import ProductPage from './Components/ProductPage';
 import Nuts from './Components/Nuts';
+import AdminDashboard from './Components/AdminDashboard';
 
 function App() { 
   return (
@@ -75,6 +76,7 @@ function App() {
             <Route path="/flowers" element={<Flowers />} />
             <Route path="/aquaticfeed" element={<AquaticFeedPage />} />
             <Route path="/nuts" element={<Nuts />} />
+            <Route path="/admin" element={<AdminDashboard />} />
           </Route>
 
           {/* Catch-all */}

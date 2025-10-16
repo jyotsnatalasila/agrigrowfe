@@ -651,18 +651,18 @@ function CategoryBar() {
 
       `}</style>
       <div className="category-bar">
-        <a href="#/home" className="category-link">
+        <a href={process.env.PUBLIC_URL + '/#/home'} className="category-link">
           <FaHome className="category-icon" /> Home
         </a>
-        <a href="#/bestsellers" className="category-link">Best Sellers</a>
-        <a href="#/todaydeals" className="category-link">Today's Deals</a>
-        <a href="#/newreleases" className="category-link">New Releases</a>
-        <a href="#/lotus" className="category-link">Lotus</a>
-        <a href="#/fruits" className="category-link">Fruits</a>
-        <a href="#/flowers" className="category-link">Flowers</a>
-        <a href="#/vegetables" className="category-link">Vegetables</a>
-        <a href="#/aquaticfeed" className="category-link">Aquatic Feed</a>
-        <a href="#/sapplings" className="category-link">Seeds & Saplings</a>
+        <a href={process.env.PUBLIC_URL + '/#/bestsellers'} className="category-link">Best Sellers</a>
+        <a href={process.env.PUBLIC_URL + '/#/todaydeals'} className="category-link">Today's Deals</a>
+        <a href={process.env.PUBLIC_URL + '/#/newreleases'} className="category-link">New Releases</a>
+        <a href={process.env.PUBLIC_URL + '/#/lotus'} className="category-link">Lotus</a>
+        <a href={process.env.PUBLIC_URL + '/#/fruits'} className="category-link">Fruits</a>
+        <a href={process.env.PUBLIC_URL + '/#/flowers'} className="category-link">Flowers</a>
+        <a href={process.env.PUBLIC_URL + '/#/vegetables'} className="category-link">Vegetables</a>
+        <a href={process.env.PUBLIC_URL + '/#/aquaticfeed'} className="category-link">Aquatic Feed</a>
+        <a href={process.env.PUBLIC_URL + '/#/sapplings'} className="category-link">Seeds & Saplings</a>
         <div 
           ref={allMenuRef}
           className="category-link"
@@ -679,8 +679,8 @@ function CategoryBar() {
           All <FaBars className="all-bars-icon" style={{ marginLeft: "5px" }} />
           {allMenuOpen && (
             <div style={{ position: 'absolute', top: 36, left: 0, background: '#fff', color: '#000', borderRadius: 6, padding: 8, boxShadow: '0 8px 24px rgba(0,0,0,0.12)', zIndex: 2200 }}>
-              <a href="/our-farmers" style={{ display: 'block', padding: '6px 10px', color: '#333', textDecoration: 'none' }}>Our farmers page</a>
-              <a href="/quality-assurance" style={{ display: 'block', padding: '6px 10px', color: '#333', textDecoration: 'none' }}>Quality Assurance</a>
+              <a href={process.env.PUBLIC_URL + '/#/our-farmers'} style={{ display: 'block', padding: '6px 10px', color: '#333', textDecoration: 'none' }}>Our farmers page</a>
+              <a href={process.env.PUBLIC_URL + '/#/quality-assurance'} style={{ display: 'block', padding: '6px 10px', color: '#333', textDecoration: 'none' }}>Quality Assurance</a>
             </div>
           )}
         </div>
@@ -860,7 +860,7 @@ export default function Navbar() {
               marginRight: "12px",
             }}
           >
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href={process.env.PUBLIC_URL + '/#/'}>
               <img
                 src= {process.env.PUBLIC_URL +"/Images/agrigrowlogo.png"}
                 alt="AgriGrow Logo"
@@ -998,11 +998,11 @@ export default function Navbar() {
           {/* THIRD COLUMN: Returns & Orders, Cart, Notifications, Wishlist, User */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '40px', marginLeft: GAP_LANGUAGE_TO_RETURNS }}>
             {/* Returns & Orders - forced to single line */}
-            <a href="#/orders" style={{ color: '#fff', fontWeight: '650', textDecoration: 'none', display: 'inline-block', fontSize: '16px', lineHeight: '1.2', whiteSpace: 'nowrap', textAlign: 'center', marginRight: GAP_RETURNS_TO_CART }}>
+            <a href={process.env.PUBLIC_URL + '/#/orders'} style={{ color: '#fff', fontWeight: '650', textDecoration: 'none', display: 'inline-block', fontSize: '16px', lineHeight: '1.2', whiteSpace: 'nowrap', textAlign: 'center', marginRight: GAP_RETURNS_TO_CART }}>
               Returns & Orders
             </a>
             
-            <a href="#/cart" style={{ position: 'relative', display: 'inline-block', cursor: 'pointer', color: 'white', textDecoration: 'none', marginRight: `${GAP_RETURNS_TO_CART}px` }} title={t('navbar.viewCart')}>
+            <a href={process.env.PUBLIC_URL + '/#/cart'} style={{ position: 'relative', display: 'inline-block', cursor: 'pointer', color: 'white', textDecoration: 'none', marginRight: `${GAP_RETURNS_TO_CART}px` }} title={t('navbar.viewCart')}>
               <FaShoppingCart size="1.8em" />
               {totalUniqueItems > 0 && (
                 <span

@@ -30,7 +30,7 @@ function CartPage() {
               <p style={{ fontSize: '1.4rem', fontWeight: 600 }}>
                 Your cart is currently empty. Start shopping now!
               </p>
-              <a href="/" style={{ 
+              <a href={process.env.PUBLIC_URL + '/#/'} style={{ 
                 display: 'inline-block', 
                 marginTop: '20px', 
                 padding: '10px 30px', 
@@ -60,7 +60,7 @@ function CartPage() {
                     }}
                   >
                     <img 
-                      src={item.image || (item.images && item.images[0]) || '/Images/1000petals.webp'} 
+                      src={item.image || (item.images && item.images[0]) || (process.env.PUBLIC_URL + '/Images/1000petals.webp')} 
                       alt={item.name} 
                       style={{ 
                         width: '80px', 

@@ -279,7 +279,7 @@ const Register = () => {
           <div style={{ marginTop: "14px", fontSize: "13px", textAlign: "center" }}>
             Already have an account?{" "}
             <a
-              href="#/login"
+              href={process.env.PUBLIC_URL + '/#/login'}
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",

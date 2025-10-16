@@ -100,7 +100,7 @@ function About() {
           }}
         >
           <img
-            src="/Images/about-farming.jpg"
+            src={process.env.PUBLIC_URL +"/Images/about-farming.jpg"}
             alt="Farming landscape"
             style={{
               width: "100%",
