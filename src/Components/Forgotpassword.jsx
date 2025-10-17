@@ -32,7 +32,7 @@ const ForgotPassword = () => {
     <div
       style={{
         fontFamily: '"Segoe UI", sans-serif',
-        backgroundImage: 'url("/Images/loginbg.jpg")',
+        backgroundImage: `url("${process.env.PUBLIC_URL}/Images/loginbg.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -80,7 +80,7 @@ const ForgotPassword = () => {
           {["Home", "Services", "Contact", "About", "Login"].map((link) => (
             <a
               key={link}
-        href={`${process.env.PUBLIC_URL}/#/${link.toLowerCase()}`}
+        href={`#/${link.toLowerCase()}`}
               style={{
                 color: "white",
                 fontWeight: "bold",
@@ -186,7 +186,7 @@ const ForgotPassword = () => {
         <div style={{ marginTop: "18px", fontSize: "12px", color: "#333", textAlign: "center" }}>
           Remember your password?{" "}
           <a
-            href={process.env.PUBLIC_URL + '/#/login'}
+            href={'#/login'}
             style={{
               color: "#2e7d32",
               textDecoration: "none",

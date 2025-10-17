@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocationContext } from './LocationProvider';
 
 // Base URL configuration
-const API_BASE_URL = 'http://localhost:1010/agrigrowbe';
+const API_BASE_URL = 'http://localhost:8080/agrigrowbe';
 
 export default function Profile() {
   const { user, setUser } = useLocationContext();
@@ -146,7 +146,6 @@ export default function Profile() {
     
     setLoading(true);
     try {
-      // ✅ CORRECTED: Changed from /api/auth/user/profile to /api/auth/profile
       console.log('Saving profile to:', `${API_BASE_URL}/api/auth/profile`);
       
       const res = await fetch(`${API_BASE_URL}/api/auth/profile`, {
