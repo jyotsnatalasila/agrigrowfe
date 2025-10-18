@@ -14,7 +14,7 @@ const carouselSlides = [
   { id: 1, image: process.env.PUBLIC_URL +"/Images/Slide4.png", alt: "Fresh Vegetables" },
   { id: 2, image: process.env.PUBLIC_URL +"/Images/Slide5.png", alt: "Agricultural Field" },
   { id: 3, image: process.env.PUBLIC_URL +"/Images/Slide1.png", alt: "Fresh Fruits" },
-  { id: 4, image: process.env.PUBLIC_URL +"/Images/Slide2 (1).png", alt: "Farming Equipment" },
+  { id: 4, image: process.env.PUBLIC_URL +"/Images/Slide2.png", alt: "Farming Equipment" },
   { id: 5, image: process.env.PUBLIC_URL +"/Images/Slide3.png", alt: "Seeds and Planting" },
 ];
 

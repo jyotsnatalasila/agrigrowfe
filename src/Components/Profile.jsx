@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocationContext } from './LocationProvider';
 
 // Base URL configuration
-const API_BASE_URL = 'http://localhost:8080/agrigrowbe';
+const API_BASE_URL = 'http://localhost:1010/agrigrowbe';
 
 export default function Profile() {
   const { user, setUser } = useLocationContext();
@@ -232,7 +232,7 @@ export default function Profile() {
 
   // Add login redirect
   const handleLoginRedirect = () => {
-    window.location.href = '/#/login';
+    window.location.href = '#/login';
   };
 
   if (loading) return <div style={{ padding: 20 }}>Loading profile...</div>;
